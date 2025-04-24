@@ -38,24 +38,27 @@
   <!--section id='conformance'></section> <!-- Gegeneerd hoofdstuk over conformiteit-->
   <!--section id='tof'></section><!-- Lijst van figuren -->
   <!--section id="index"></section><!-- Lijst van begrippen -->
-   <script>
-    // Maak begrippen clickable
+  <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Pak alle <td>-elementen op de pagina
+    // Alle <td>-elementen
     const tdElements = document.querySelectorAll("td");
 
     tdElements.forEach(td => {
-      const text = td.textContent.trim();
-      // Check of de tekst een geldige URL lijkt te zijn
-      if (text.startsWith("http://") || text.startsWith("https://")) {
-        // Maak er een <a> element van
-        const a = document.createElement("a");
-        a.href = text;
-        a.textContent = text;
-        a.target = "_blank"; // opent in nieuw tabblad
-        // Vervang de inhoud van de <td> met de <a>
-        td.textContent = ""; // eerst leegmaken
-        td.appendChild(a);
+      // Haal de originele HTML eruit
+      const html = td.innerHTML;
+      
+      // Zoek naar URL's in de tekst (reguliere expressie)
+      const urlRegex = /(https?:\/\/[^\s<>"]+)/g;
+
+      // Alleen doorgaan als er een URL in zit
+      if (urlRegex.test(html)) {
+        // Vervang de URL met een klikbare link
+        const linkedHTML = html.replace(urlRegex, function(url) {
+          return `<a href="${url}" target="_blank">${url}</a>`;
+        });
+
+        // Zet het resultaat terug
+        td.innerHTML = linkedHTML;
       }
     });
   });

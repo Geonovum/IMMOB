@@ -19,6 +19,29 @@
        worden, zodat de imagemap die op deze plaatjes zit werkt. -->
   <style>div.imageinfo img {max-width: none;}</style>
    <link rel="stylesheet" href="media/style.css">
+  <script>
+    // Maak begrippen clickable
+  document.addEventListener("DOMContentLoaded", function () {
+    // Pak alle <td>-elementen op de pagina
+    const tdElements = document.querySelectorAll("td");
+
+    tdElements.forEach(td => {
+      const text = td.textContent.trim();
+      // Check of de tekst een geldige URL lijkt te zijn
+      if (text.startsWith("http://") || text.startsWith("https://")) {
+        // Maak er een <a> element van
+        const a = document.createElement("a");
+        a.href = text;
+        a.textContent = text;
+        a.target = "_blank"; // opent in nieuw tabblad
+        // Vervang de inhoud van de <td> met de <a>
+        td.textContent = ""; // eerst leegmaken
+        td.appendChild(a);
+      }
+    });
+  });
+</script>
+
 </head>
 
 <body>

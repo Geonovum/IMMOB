@@ -1,4 +1,5 @@
 let respecConfig = {
+  maxTocLevel: 3,
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------

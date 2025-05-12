@@ -2,7 +2,7 @@
    <body>
       <section id="cat" class="normative">
          <h2>Gegevensdefinitie</h2>
-         <!--MIMCM-IMMob-conceptueel-1.0-1-20250414-20250428-145443 imvertor 4.3.0-->
+         <!--MIMCM-IMMob-conceptueel-1.0-1-20250414-20250512-135826 imvertor 4.3.0-->
          <section id="global_package_Mobiliteit">
             <h3>Domein   Mobiliteit</h3>
             <section id="EAID_4CC5EE07_D982_4fb9_B579_A338B9A2E7E2">
@@ -25,7 +25,7 @@
                      <h6>   Weglink - detail</h6>
                      <div class="imageinfo ">
                         <figure class="uml-diagram"><img id="EAID_2ED628F2_C56A_4052_AE63_2AEBCBA14ED9" src="Images/EAID_2ED628F2_C56A_4052_AE63_2AEBCBA14ED9.png" usemap="#imagemap-EAID_2ED628F2_C56A_4052_AE63_2AEBCBA14ED9" alt="Diagram: Weglink - detail"></img><figcaption> ‒ Diagram: Weglink</figcaption>
-                        </figure><map name="imagemap-EAID_2ED628F2_C56A_4052_AE63_2AEBCBA14ED9"><area shape="rect" alt="KeuzeWegverbindingNWBofIBRO" coords="201,236,390,285" href="#global_class_Mobiliteit_KeuzeWegverbindingNWBofIBRO"></area><area shape="rect" alt="Wegverbinding" coords="296,63,486,171" href="#global_class_IBRO_Wegverbinding"></area><area shape="rect" alt="Wegvak" coords="48,64,229,169" href="#global_class_NWB_Wegvak"></area><area shape="rect" alt="Wegclassificatie" coords="182,617,404,774" href="#global_class_Mobiliteit_Wegclassificatie"></area><area shape="rect" alt="Weglink" coords="182,371,397,587" href="#global_class_Mobiliteit_Weglink"></area></map><p>
+                        </figure><map name="imagemap-EAID_2ED628F2_C56A_4052_AE63_2AEBCBA14ED9"><area shape="rect" alt="Strookverbinding" coords="554,255,718,351" href="#global_class_IBRO_Strookverbinding"></area><area shape="rect" alt="Rijbaan" coords="444,617,566,712" href="#global_class_Mobiliteit_Rijbaan"></area><area shape="rect" alt="Rijstrook" coords="573,437,696,532" href="#global_class_Mobiliteit_Rijstrook"></area><area shape="rect" alt="KeuzeWegverbindingNWBofIBRO" coords="201,236,390,285" href="#global_class_Mobiliteit_KeuzeWegverbindingNWBofIBRO"></area><area shape="rect" alt="Wegverbinding" coords="296,63,486,171" href="#global_class_IBRO_Wegverbinding"></area><area shape="rect" alt="Wegvak" coords="48,64,229,169" href="#global_class_NWB_Wegvak"></area><area shape="rect" alt="Wegclassificatie" coords="182,617,404,774" href="#global_class_Mobiliteit_Wegclassificatie"></area><area shape="rect" alt="Weglink" coords="180,371,396,587" href="#global_class_Mobiliteit_Weglink"></area></map><p>
                            
                            <p></p>
                            </p>
@@ -50,6 +50,13 @@
                         <tr>
                            <th>Naam</th>
                            <td>Weglink</td>
+                        </tr>
+                        <tr>
+                           <th>Alias</th>
+                           <td>
+                              
+                              <alias>Road Link</alias>
+                              </td>
                         </tr>
                         <tr>
                            <th>Begrip</th>
@@ -220,6 +227,20 @@
                               Weglink
                               [ 1 ]
                               
+                              <a class="link" href="#detail_association_Mobiliteit_Weglink_rijstrook">bestaat uit: rijstrook</a>
+                              
+                              
+                              <a class="link" href="#global_class_Mobiliteit_Rijstrook">Rijstrook</a>
+                              
+                              [ 1 .. * ]
+                              </td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>
+                              Weglink
+                              [ 1 ]
+                              
                               <a class="link" href="#detail_association_Mobiliteit_Weglink_basisobject">heeft als basisobject: basisobject</a>
                               
                               
@@ -293,6 +314,83 @@
                   
                   </section>
                
+               <section id="global_class_Mobiliteit_Rijbaan">
+                  <h5>   Rijbaan</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>Rijbaan</td>
+                        </tr>
+                        <tr>
+                           <th>Alias</th>
+                           <td>
+                              
+                              <alias>Carriageway</alias>
+                              </td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie abstract object</th>
+                           <td>Nee</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </section>
+               
+               <section id="global_class_Mobiliteit_Rijstrook">
+                  <h5>   Rijstrook</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>Rijstrook</td>
+                        </tr>
+                        <tr>
+                           <th>Alias</th>
+                           <td>
+                              
+                              <alias>Lane</alias>
+                              </td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie abstract object</th>
+                           <td>Nee</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  <h6>Overzicht relaties  </h6>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 50%;"></colgroup>
+                     <colgroup style="width: 50%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Rol naam met kardinaliteiten</th>
+                           <th>Definitie</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              Rijstrook
+                              is specialisatie van
+                              
+                              <a class="link" href="#global_class_IBRO_Strookverbinding">Strookverbinding</a>
+                              
+                              </td>
+                           <td></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  </section>
+               
                <section id="global_class_Mobiliteit_Snelheidsbeperking">
                   <h5>   Snelheidsbeperking</h5>
                   
@@ -300,7 +398,7 @@
                      <h6>   Snelheidsbeperking - detail</h6>
                      <div class="imageinfo ">
                         <figure class="uml-diagram"><img id="EAID_7324F5DE_60D1_44eb_A262_0196ED639C3A" src="Images/EAID_7324F5DE_60D1_44eb_A262_0196ED639C3A.png" usemap="#imagemap-EAID_7324F5DE_60D1_44eb_A262_0196ED639C3A" alt="Diagram: Snelheidsbeperking - detail"></img><figcaption> ‒ Diagram: Snelheidsbeperking</figcaption>
-                        </figure><map name="imagemap-EAID_7324F5DE_60D1_44eb_A262_0196ED639C3A"><area shape="rect" alt="Geldigheid" coords="396,1127,580,1249" href="#global_class_Mobiliteit_Geldigheid"></area><area shape="rect" alt="Voertuigcategorie" coords="581,993,704,1255" href="#global_class_Mobiliteit_Voertuigcategorie"></area><area shape="rect" alt="Strookverbinding" coords="947,864,1111,959" href="#global_class_IBRO_Strookverbinding"></area><area shape="rect" alt="Wegverbinding" coords="711,63,924,206" href="#global_class_IBRO_Wegverbinding"></area><area shape="rect" alt="Wegvak" coords="48,63,344,615" href="#global_class_NWB_Wegvak"></area><area shape="rect" alt="KeuzeWegverbindingNWBofIBRO" coords="450,156,640,237" href="#global_class_Mobiliteit_KeuzeWegverbindingNWBofIBRO"></area><area shape="rect" alt="Rijrichting" coords="203,707,326,864" href="#detail_class_NWB_Rijrichting"></area><area shape="rect" alt="TypeSnelheidsbeperking" coords="397,993,543,1115" href="#detail_class_Mobiliteit_TypeSnelheidsbeperking"></area><area shape="rect" alt="Weglink" coords="442,364,658,598" href="#global_class_Mobiliteit_Weglink"></area><area shape="rect" alt="Snelheidsbeperking" coords="394,707,704,962" href="#global_class_Mobiliteit_Snelheidsbeperking"></area></map><p>
+                        </figure><map name="imagemap-EAID_7324F5DE_60D1_44eb_A262_0196ED639C3A"><area shape="rect" alt="Rijstrook" coords="965,675,1088,771" href="#global_class_Mobiliteit_Rijstrook"></area><area shape="rect" alt="Tijdvenster" coords="396,1127,580,1249" href="#global_class_Mobiliteit_Tijdvenster"></area><area shape="rect" alt="Voertuigcategorie" coords="581,993,704,1063" href="#global_class_Mobiliteit_Voertuigcategorie"></area><area shape="rect" alt="Strookverbinding" coords="950,502,1114,598" href="#global_class_IBRO_Strookverbinding"></area><area shape="rect" alt="Wegverbinding" coords="711,63,924,206" href="#global_class_IBRO_Wegverbinding"></area><area shape="rect" alt="Wegvak" coords="48,63,344,615" href="#global_class_NWB_Wegvak"></area><area shape="rect" alt="KeuzeWegverbindingNWBofIBRO" coords="450,156,640,237" href="#global_class_Mobiliteit_KeuzeWegverbindingNWBofIBRO"></area><area shape="rect" alt="Rijrichting" coords="203,707,326,864" href="#detail_class_NWB_Rijrichting"></area><area shape="rect" alt="TypeSnelheidsbeperking" coords="397,993,543,1115" href="#detail_class_Mobiliteit_TypeSnelheidsbeperking"></area><area shape="rect" alt="Weglink" coords="442,364,658,598" href="#global_class_Mobiliteit_Weglink"></area><area shape="rect" alt="Snelheidsbeperking" coords="394,707,704,962" href="#global_class_Mobiliteit_Snelheidsbeperking"></area></map><p>
                            
                            <p></p>
                            </p>
@@ -441,27 +539,27 @@
                               <p>De periode waarin de snelheidsbeperking geldt (bijvoorbeeld werkdagen, nachten, seizoensgebonden).</p>
                               </td>
                            <td>
-                              <a class="link" href="#detail_class_Mobiliteit_Geldigheid">Geldigheid</a>
+                              <a class="link" href="#detail_class_Mobiliteit_Tijdvenster">Tijdvenster</a>
                               </td>
                            <td>1</td>
                         </tr>
                         <tr>
                            <td>- 
-                              <a class="link" href="#detail_attribute_Mobiliteit_Geldigheid_begingeldigheid">begin geldigheid</a>
+                              <a class="link" href="#detail_attribute_Mobiliteit_Tijdvenster_begintijd">begintijd</a>
                               </td>
                            <td></td>
                            <td>
-                              DATE
+                              DATETIME
                               </td>
                            <td>1</td>
                         </tr>
                         <tr>
                            <td>- 
-                              <a class="link" href="#detail_attribute_Mobiliteit_Geldigheid_eindgeldigheid">eind geldigheid</a>
+                              <a class="link" href="#detail_attribute_Mobiliteit_Tijdvenster_eindtijd">eindtijd</a>
                               </td>
                            <td></td>
                            <td>
-                              DATE
+                              DATETIME
                               </td>
                            <td>0 .. 1</td>
                         </tr>
@@ -502,7 +600,7 @@
                               <a class="link" href="#detail_association_Mobiliteit_Snelheidsbeperking_strook">is van toepassing op: strook</a>
                               
                               
-                              <a class="link" href="#global_class_IBRO_Strookverbinding">Strookverbinding</a>
+                              <a class="link" href="#global_class_Mobiliteit_Rijstrook">Rijstrook</a>
                               
                               [ 0 .. * ]
                               </td>
@@ -995,6 +1093,236 @@
                      </tbody>
                   </table>
                   </section>
+               
+               <section id="global_class_Mobiliteit_Wegwerkzaamheden">
+                  <h5>   Wegwerkzaamheden</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>Wegwerkzaamheden</td>
+                        </tr>
+                        <tr>
+                           <th>Alias</th>
+                           <td>
+                              
+                              <alias>Roadworks</alias>
+                              </td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie abstract object</th>
+                           <td>Nee</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  <h6>Overzicht attributen  </h6>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 50%;"></colgroup>
+                     <colgroup style="width: 10%;"></colgroup>
+                     <colgroup style="width: 10%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Attribuutnaam</th>
+                           <th>Definitie</th>
+                           <th>Formaat</th>
+                           <th>Card</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a class="link" href="#detail_attribute_Mobiliteit_Wegwerkzaamheden_duurtype">duurtype</a>
+                              </td>
+                           <td></td>
+                           <td>
+                              Duurtype
+                              </td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a class="link" href="#detail_attribute_Mobiliteit_Wegwerkzaamheden_planningstype">planningstype</a>
+                              </td>
+                           <td></td>
+                           <td>
+                              Planningstype
+                              </td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <a class="link" href="#detail_attribute_Mobiliteit_Wegwerkzaamheden_typewegwerkzaamheid">type wegwerkzaamheid</a>
+                              </td>
+                           <td></td>
+                           <td>
+                              Type­Wegwerkzaamheid
+                              </td>
+                           <td>1 .. *</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              tijd­Geldigheid
+                              :</td>
+                           <td></td>
+                           <td>
+                              <a class="link" href="#detail_class_Mobiliteit_tijdGeldigheid">tijd­Geldigheid</a>
+                              </td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td>- 
+                              <a class="link" href="#detail_attribute_Mobiliteit_tijdGeldigheid_begintijd">begintijd</a>
+                              </td>
+                           <td></td>
+                           <td>
+                              DATETIME
+                              </td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td>- 
+                              <a class="link" href="#detail_attribute_Mobiliteit_tijdGeldigheid_eindtijd">eindtijd</a>
+                              </td>
+                           <td></td>
+                           <td>
+                              DATETIME
+                              </td>
+                           <td>1</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  </section>
+               
+               <section id="global_class_Mobiliteit_Sluiting">
+                  <h5>   Sluiting</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>Sluiting</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie abstract object</th>
+                           <td>Nee</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </section>
+               
+               <section id="global_class_Mobiliteit_Tijdelijkeverkeersbeheersmaatregel">
+                  <h5>   Tijdelijke verkeersbeheersmaatregel</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>Tijdelijke verkeersbeheersmaatregel</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie abstract object</th>
+                           <td>Nee</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </section>
+               
+               <section id="global_class_Mobiliteit_Sluitingrijstrook">
+                  <h5>   Sluiting rijstrook</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>Sluiting rijstrook</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie abstract object</th>
+                           <td>Nee</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  <h6>Overzicht relaties  </h6>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 50%;"></colgroup>
+                     <colgroup style="width: 50%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Rol naam met kardinaliteiten</th>
+                           <th>Definitie</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              Sluiting rijstrook
+                              is specialisatie van
+                              
+                              <a class="link" href="#global_class_Mobiliteit_Sluiting">Sluiting</a>
+                              
+                              </td>
+                           <td></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  </section>
+               
+               <section id="global_class_Mobiliteit_Sluitingweg">
+                  <h5>   Sluiting weg</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>Sluiting weg</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie abstract object</th>
+                           <td>Nee</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  <h6>Overzicht relaties  </h6>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 50%;"></colgroup>
+                     <colgroup style="width: 50%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Rol naam met kardinaliteiten</th>
+                           <th>Definitie</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              Sluiting weg
+                              is specialisatie van
+                              
+                              <a class="link" href="#global_class_Mobiliteit_Sluiting">Sluiting</a>
+                              
+                              </td>
+                           <td></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  </section>
                </section>
             <section>
                <h4>Keuzen   </h4>
@@ -1085,8 +1413,8 @@
                   
                   </section>
                
-               <section id="global_class_Mobiliteit_Geldigheid">
-                  <h5>Gegevensgroep   Geldigheid</h5>
+               <section id="global_class_Mobiliteit_Tijdvenster">
+                  <h5>Gegevensgroep   Tijdvenster</h5>
                   
                   <table style="width: 100%;">
                      <colgroup style="width: 30%;"></colgroup>
@@ -1094,7 +1422,7 @@
                      <tbody>
                         <tr>
                            <th>Naam</th>
-                           <td>Geldigheid</td>
+                           <td>Tijdvenster</td>
                         </tr>
                      </tbody>
                   </table>
@@ -1115,23 +1443,76 @@
                         </tr>
                         <tr>
                            <td>- 
-                              <a class="link" href="#detail_attribute_Mobiliteit_Geldigheid_begingeldigheid">begin geldigheid</a>
+                              <a class="link" href="#detail_attribute_Mobiliteit_Tijdvenster_begintijd">begintijd</a>
                               </td>
                            <td></td>
                            <td>
-                              DATE
+                              DATETIME
                               </td>
                            <td>1</td>
                         </tr>
                         <tr>
                            <td>- 
-                              <a class="link" href="#detail_attribute_Mobiliteit_Geldigheid_eindgeldigheid">eind geldigheid</a>
+                              <a class="link" href="#detail_attribute_Mobiliteit_Tijdvenster_eindtijd">eindtijd</a>
                               </td>
                            <td></td>
                            <td>
-                              DATE
+                              DATETIME
                               </td>
                            <td>0 .. 1</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  </section>
+               
+               <section id="global_class_Mobiliteit_tijdGeldigheid">
+                  <h5>Gegevensgroep   tijd­Geldigheid</h5>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>tijd­Geldigheid</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  
+                  <h6>Overzicht attributen  </h6>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 50%;"></colgroup>
+                     <colgroup style="width: 10%;"></colgroup>
+                     <colgroup style="width: 10%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Attribuutnaam</th>
+                           <th>Definitie</th>
+                           <th>Formaat</th>
+                           <th>Card</th>
+                        </tr>
+                        <tr>
+                           <td>- 
+                              <a class="link" href="#detail_attribute_Mobiliteit_tijdGeldigheid_begintijd">begintijd</a>
+                              </td>
+                           <td></td>
+                           <td>
+                              DATETIME
+                              </td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td>- 
+                              <a class="link" href="#detail_attribute_Mobiliteit_tijdGeldigheid_eindtijd">eindtijd</a>
+                              </td>
+                           <td></td>
+                           <td>
+                              DATETIME
+                              </td>
+                           <td>1</td>
                         </tr>
                      </tbody>
                   </table>
@@ -1396,6 +1777,32 @@
                         </table>
                         </div>
                      
+                     <div class="deepheader" id="detail_association_Mobiliteit_Weglink_rijstrook">
+                        <h7>Relatiesoort details  <a href="#global_class_Mobiliteit_Weglink">Weglink</a> bestaat uit</h7>
+                        
+                        
+                        <table style="width: 100%;">
+                           <colgroup style="width: 30%;"></colgroup>
+                           <colgroup style="width: 70%;"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>Naam</th>
+                                 <td>bestaat uit</td>
+                              </tr>
+                              <tr>
+                                 <th>Gerelateerd objecttype</th>
+                                 <td>
+                                    <a class="link" href="#global_class_Mobiliteit_Rijstrook">Rijstrook</a>
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Kardinaliteit</th>
+                                 <td>1 .. *</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </div>
+                     
                      <div class="deepheader" id="detail_association_Mobiliteit_Weglink_basisobject">
                         <h7>Relatiesoort details  <a href="#global_class_Mobiliteit_Weglink">Weglink</a> heeft als basisobject</h7>
                         
@@ -1458,6 +1865,8 @@
                         </table>
                         </div>
                      </section>
+                  
+                  
                   
                   <section id="detail_class_Mobiliteit_Snelheidsbeperking">
                      <h6>   Snelheidsbeperking</h6>
@@ -1757,7 +2166,7 @@
                               <tr>
                                  <th>Gerelateerd objecttype</th>
                                  <td>
-                                    <a class="link" href="#global_class_IBRO_Strookverbinding">Strookverbinding</a>
+                                    <a class="link" href="#global_class_Mobiliteit_Rijstrook">Rijstrook</a>
                                     </td>
                               </tr>
                               <tr>
@@ -1775,6 +2184,122 @@
                   
                   
                   
+                  
+                  
+                  
+                  
+                  
+                  <section id="detail_class_Mobiliteit_Wegwerkzaamheden">
+                     <h6>   Wegwerkzaamheden</h6>
+                     
+                     <div class="deepheader" id="detail_attribute_Mobiliteit_Wegwerkzaamheden_duurtype">
+                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_Wegwerkzaamheden">Wegwerkzaamheden</a> duurtype</h7>
+                        
+                        <table style="width: 100%;">
+                           <colgroup style="width: 30%;"></colgroup>
+                           <colgroup style="width: 70%;"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>Naam</th>
+                                 <td>duurtype</td>
+                              </tr>
+                              <tr>
+                                 <th>Formaat</th>
+                                 <td>
+                                    <a class="link" href="#detail_class_Mobiliteit_Duurtype">Duurtype</a>
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Patroon</th>
+                                 <td>
+                                    De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel
+                                    het waardenbereik, uitgedrukt in een specifieke structuur.
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Kardinaliteit</th>
+                                 <td>1</td>
+                              </tr>
+                              <tr>
+                                 <th>Indicatie identificerend</th>
+                                 <td>Nee</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </div>
+                     
+                     <div class="deepheader" id="detail_attribute_Mobiliteit_Wegwerkzaamheden_planningstype">
+                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_Wegwerkzaamheden">Wegwerkzaamheden</a> planningstype</h7>
+                        
+                        <table style="width: 100%;">
+                           <colgroup style="width: 30%;"></colgroup>
+                           <colgroup style="width: 70%;"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>Naam</th>
+                                 <td>planningstype</td>
+                              </tr>
+                              <tr>
+                                 <th>Formaat</th>
+                                 <td>
+                                    <a class="link" href="#detail_class_Mobiliteit_Planningstype">Planningstype</a>
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Patroon</th>
+                                 <td>
+                                    De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel
+                                    het waardenbereik, uitgedrukt in een specifieke structuur.
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Kardinaliteit</th>
+                                 <td>1</td>
+                              </tr>
+                              <tr>
+                                 <th>Indicatie identificerend</th>
+                                 <td>Nee</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </div>
+                     
+                     <div class="deepheader" id="detail_attribute_Mobiliteit_Wegwerkzaamheden_typewegwerkzaamheid">
+                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_Wegwerkzaamheden">Wegwerkzaamheden</a> type wegwerkzaamheid</h7>
+                        
+                        <table style="width: 100%;">
+                           <colgroup style="width: 30%;"></colgroup>
+                           <colgroup style="width: 70%;"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>Naam</th>
+                                 <td>type wegwerkzaamheid</td>
+                              </tr>
+                              <tr>
+                                 <th>Formaat</th>
+                                 <td>
+                                    <a class="link" href="#detail_class_Mobiliteit_TypeWegwerkzaamheid">Type­Wegwerkzaamheid</a>
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Patroon</th>
+                                 <td>
+                                    De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel
+                                    het waardenbereik, uitgedrukt in een specifieke structuur.
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Kardinaliteit</th>
+                                 <td>1 .. *</td>
+                              </tr>
+                              <tr>
+                                 <th>Indicatie identificerend</th>
+                                 <td>Nee</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </div>
+                     </section>
                   
                   
                   
@@ -1856,11 +2381,11 @@
                         </div>
                      </section>
                   
-                  <section id="detail_class_Mobiliteit_Geldigheid">
-                     <h6>Gegevensgroeptype   Geldigheid</h6>
+                  <section id="detail_class_Mobiliteit_Tijdvenster">
+                     <h6>Gegevensgroeptype   Tijdvenster</h6>
                      
-                     <div class="deepheader" id="detail_attribute_Mobiliteit_Geldigheid_begingeldigheid">
-                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_Geldigheid">Geldigheid</a> begin geldigheid</h7>
+                     <div class="deepheader" id="detail_attribute_Mobiliteit_Tijdvenster_begintijd">
+                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_Tijdvenster">Tijdvenster</a> begintijd</h7>
                         
                         <table style="width: 100%;">
                            <colgroup style="width: 30%;"></colgroup>
@@ -1868,11 +2393,11 @@
                            <tbody>
                               <tr>
                                  <th>Naam</th>
-                                 <td>begin geldigheid</td>
+                                 <td>begintijd</td>
                               </tr>
                               <tr>
                                  <th>Formaat</th>
-                                 <td>DATE</td>
+                                 <td>DATETIME</td>
                               </tr>
                               <tr>
                                  <th>Patroon</th>
@@ -1893,8 +2418,8 @@
                         </table>
                         </div>
                      
-                     <div class="deepheader" id="detail_attribute_Mobiliteit_Geldigheid_eindgeldigheid">
-                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_Geldigheid">Geldigheid</a> eind geldigheid</h7>
+                     <div class="deepheader" id="detail_attribute_Mobiliteit_Tijdvenster_eindtijd">
+                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_Tijdvenster">Tijdvenster</a> eindtijd</h7>
                         
                         <table style="width: 100%;">
                            <colgroup style="width: 30%;"></colgroup>
@@ -1902,11 +2427,11 @@
                            <tbody>
                               <tr>
                                  <th>Naam</th>
-                                 <td>eind geldigheid</td>
+                                 <td>eindtijd</td>
                               </tr>
                               <tr>
                                  <th>Formaat</th>
-                                 <td>DATE</td>
+                                 <td>DATETIME</td>
                               </tr>
                               <tr>
                                  <th>Patroon</th>
@@ -1918,6 +2443,78 @@
                               <tr>
                                  <th>Kardinaliteit</th>
                                  <td>0 .. 1</td>
+                              </tr>
+                              <tr>
+                                 <th>Indicatie identificerend</th>
+                                 <td>Nee</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </div>
+                     </section>
+                  
+                  <section id="detail_class_Mobiliteit_tijdGeldigheid">
+                     <h6>Gegevensgroeptype   tijd­Geldigheid</h6>
+                     
+                     <div class="deepheader" id="detail_attribute_Mobiliteit_tijdGeldigheid_begintijd">
+                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_tijdGeldigheid">tijd­Geldigheid</a> begintijd</h7>
+                        
+                        <table style="width: 100%;">
+                           <colgroup style="width: 30%;"></colgroup>
+                           <colgroup style="width: 70%;"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>Naam</th>
+                                 <td>begintijd</td>
+                              </tr>
+                              <tr>
+                                 <th>Formaat</th>
+                                 <td>DATETIME</td>
+                              </tr>
+                              <tr>
+                                 <th>Patroon</th>
+                                 <td>
+                                    De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel
+                                    het waardenbereik, uitgedrukt in een specifieke structuur.
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Kardinaliteit</th>
+                                 <td>1</td>
+                              </tr>
+                              <tr>
+                                 <th>Indicatie identificerend</th>
+                                 <td>Nee</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        </div>
+                     
+                     <div class="deepheader" id="detail_attribute_Mobiliteit_tijdGeldigheid_eindtijd">
+                        <h7>Attribuutsoort details  <a href="#global_class_Mobiliteit_tijdGeldigheid">tijd­Geldigheid</a> eindtijd</h7>
+                        
+                        <table style="width: 100%;">
+                           <colgroup style="width: 30%;"></colgroup>
+                           <colgroup style="width: 70%;"></colgroup>
+                           <tbody>
+                              <tr>
+                                 <th>Naam</th>
+                                 <td>eindtijd</td>
+                              </tr>
+                              <tr>
+                                 <th>Formaat</th>
+                                 <td>DATETIME</td>
+                              </tr>
+                              <tr>
+                                 <th>Patroon</th>
+                                 <td>
+                                    De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel
+                                    het waardenbereik, uitgedrukt in een specifieke structuur.
+                                    </td>
+                              </tr>
+                              <tr>
+                                 <th>Kardinaliteit</th>
+                                 <td>1</td>
                               </tr>
                               <tr>
                                  <th>Indicatie identificerend</th>
@@ -13985,7 +14582,7 @@
       </section>
       <section id="lis" class="normative">
          <h2>Inhoud van waardelijsten</h2>
-         <!--MIMCM-IMMob-conceptueel-1.0-1-20250414-20250428-145443 imvertor 4.3.0-->
+         <!--MIMCM-IMMob-conceptueel-1.0-1-20250414-20250512-135826 imvertor 4.3.0-->
          <section>
             <h3>Codelijst inhoud   </h3>
             <section id="detail_class_Mobiliteit_Voertuigcategorie">
@@ -14038,6 +14635,136 @@
                      </tr>
                      <tr>
                         <th>minimum</th>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            <section id="detail_class_Mobiliteit_Duurtype">
+               <h4>Enumeratie details  Duurtype</h4>
+               
+               <table style="width: 100%;" class="list">
+                  <colgroup></colgroup>
+                  <tbody>
+                     <tr>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               <table style="width: 100%;" class="list">
+                  <colgroup style="width: 40%;"></colgroup>
+                  <colgroup style="width: 60%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Waarde</th>
+                        <th>Omschrijving</th>
+                     </tr>
+                     <tr>
+                        <th>kortdurend</th>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <th>langdurend</th>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            <section id="detail_class_Mobiliteit_Planningstype">
+               <h4>Enumeratie details  Planningstype</h4>
+               
+               <table style="width: 100%;" class="list">
+                  <colgroup></colgroup>
+                  <tbody>
+                     <tr>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               <table style="width: 100%;" class="list">
+                  <colgroup style="width: 40%;"></colgroup>
+                  <colgroup style="width: 60%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Waarde</th>
+                        <th>Omschrijving</th>
+                     </tr>
+                     <tr>
+                        <th>gepland</th>
+                        <td>
+                           
+                           <p>Komt overeen met vooraf ingeplande onderhouds-, constructie- of reparatiewerkzaamheden
+                              die plaatsvinden op volledige wegvakken of specifieke segmenten daarvan. Dergelijke
+                              activiteiten worden doorgaans vooraf aangekondigd door wegbeheerders of lokale autoriteiten
+                              om verkeershinder te beperken en weggebruikers in staat te stellen tijdig alternatieve
+                              routes te plannen.</p>
+                           </td>
+                     </tr>
+                     <tr>
+                        <th>niet gepland</th>
+                        <td>
+                           
+                           <p>Heeft betrekking op onderhouds-, reparatie- of constructiewerkzaamheden die onverwacht
+                              en zonder voorafgaande planning worden uitgevoerd. Deze activiteiten worden meestal
+                              gestart als reactie op urgente situaties, zoals schade aan de weg of storingen aan
+                              infrastructuur, die direct ingrijpen vereisen.</p>
+                           </td>
+                     </tr>
+                  </tbody>
+               </table>
+               </section>
+            <section id="detail_class_Mobiliteit_TypeWegwerkzaamheid">
+               <h4>Enumeratie details  Type­Wegwerkzaamheid</h4>
+               
+               <table style="width: 100%;" class="list">
+                  <colgroup></colgroup>
+                  <tbody>
+                     <tr>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+               <table style="width: 100%;" class="list">
+                  <colgroup style="width: 10%;"></colgroup>
+                  <colgroup style="width: 30%;"></colgroup>
+                  <colgroup style="width: 60%;"></colgroup>
+                  <tbody>
+                     <tr>
+                        <th>Code</th>
+                        <th>Waarde</th>
+                        <th>Omschrijving</th>
+                     </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>grote wegwerkzaamheden</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>kortdurende stationaire werkzaamheden</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>langzaam rijdend onderhoud</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>5</td>
+                        <td>straatreiniging</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td>wegmarkering</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>6</td>
+                        <td>winteronderhoud</td>
                         <td></td>
                      </tr>
                   </tbody>

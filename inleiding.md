@@ -94,7 +94,7 @@ Dit document is als volgt opgebouwd:
     uitgewerkt welke data beschikbaar (moet) zijn, wat de herkomst is, en onder
     welke condities deze data deel uitmaken van het DSM.
 
-Deze opbouw zorgt ervoor dat de lezer van strategisch kader naar concrete
-uitwerking wordt geleid. De hoofdstukken zijn afzonderlijk leesbaar, maar vormen
-gezamenlijk het geheel dat inzicht geeft in de datastructuur en
-verantwoordelijkheden binnen het mobiliteitsdatadomein.
+De opbouw helpt de lezer om stap voor stap van het grotere plaatje naar de
+concrete invulling te gaan. Elk hoofdstuk is op zichzelf te lezen, maar samen
+geven ze een compleet beeld van hoe de data is opgebouwd en hoe de onderdelen
+binnen het mobiliteitsdomein met elkaar samenhangen.

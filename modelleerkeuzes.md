@@ -1,15 +1,15 @@
 # Modelleerkeuzes
 
-De modellering van het kennismodel voor de Gegevenscatalogus Mobiliteitsdata is
+De modellering van het informatiemodel RealTime VerkeersInformatie (RTVI) is
 gebaseerd op een aantal bewuste modelleurkeuzes. Deze keuzes vloeien voort uit
 de ontwerpprincipes en zorgen voor een consistente, herleidbare en
-toekomstbestendige kennislaag die wet- en regelgeving verbindt met
+toekomstbestendige informatielaag die wet- en regelgeving verbindt met
 mobiliteitsdatasets. Hieronder worden de belangrijkste modelleerkeuzes
 toegelicht.
 
 ## Centrale beheeromgeving in UML
 
-Het kennismodel wordt centraal beheerd in een UML-omgeving, vormgegeven in
+Het informatiemodel wordt centraal beheerd in een UML-omgeving, vormgegeven in
 Enterprise Architect. In deze omgeving worden verschillende lagen van het model
 opgebouwd en beheerd:
 
@@ -37,9 +37,9 @@ opgesteld conform MIM:
 -   In visualisaties kan worden gewisseld tussen weergave van conceptuele of
     technische terminologie, afhankelijk van doelgroep en toepassing.
 
-## Verbindend kennismodel
+## Verbindend informatiemodel
 
-Het kennismodel fungeert als brug tussen juridische concepten en
+Het informatiemodel fungeert als brug tussen juridische concepten en
 informatiekundige structuren. Daartoe worden expliciete relaties gelegd tussen:
 
 -   Concepten in het model van de ITS-regelgeving;
@@ -50,7 +50,7 @@ Deze relaties vormen de kern van het gedeelde begrippenkader.
 
 ## Modelleren volgens MIM-niveau 2
 
-Het gehele kennismodel wordt opgebouwd volgens MIM-niveau 2, waarmee een
+Het gehele informatiemodel wordt opgebouwd volgens MIM-niveau 2, waarmee een
 conceptueel model wordt gedefinieerd. Dit wordt uitgebreid met:
 
 -   Grondslaginformatie (herkomst, juridische basis, beher- en
@@ -83,7 +83,7 @@ Voor geometrie en wegkenmerken is gekozen voor:
 -   SOLL: de Wegenkenmerkregistratie (WKR), waarvoor een conceptueel model
     beschikbaar is uit het Mercator-project.
 
-Beide modellen zijn as-is opgenomen. Er worden binnen het kennismodel geen
+Beide modellen zijn as-is opgenomen. Er worden binnen het informatiemodel geen
 aanpassingen of verbetersuggesties gedaan op deze modellen. Ook andere bronnen
 voor geometrie zijn mogelijk, zoals VILD (voor wegwerkzaamheden).
 
@@ -126,7 +126,7 @@ De verbinding tussen regelgeving en data wordt gelegd met «trace»-relaties:
 
 ## Genereren van modelgedreven representaties
 
-Vanuit het centrale kennismodel worden automatisch verschillende representaties
+Vanuit het informatiemodel worden automatisch verschillende representaties
 gegenereerd, zoals:
 
 -   Een HTML-weergave voor opname in de Gegevenscatalogus;
@@ -163,9 +163,9 @@ datasets. Hieronder volgt een overzicht van deze specifieke detailkeuzes.
     ‘bestaat uit’.
 
 -   In DATEXII Wegwerkzaamheden heeft een Situation een locatie-referentie. De
-    locatie referentie wordt gelegd via VILD-mapping. In het kennismodel wordt
-    de geometrie van Wegwerkzaamheden daarom gerelateerd aan LocationReference
-    uit DATEXII.
+    locatie referentie wordt gelegd via VILD-mapping. In het informatiemodel
+    wordt de geometrie van Wegwerkzaamheden daarom gerelateerd aan
+    LocationReference uit DATEXII.
 
 ### RTTI 1. De soorten infrastructuurgegevens
 

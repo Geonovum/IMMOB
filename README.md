@@ -1,4 +1,12 @@
+
+Het werkdocument van het informatiemodel staat hier:
+<https://geonovum.github.io/IMMOB>
+
 ## ReSpec template instructies
+
+
+
+
 
 ReSpec is een tool om html en pdf documenten te genereren op basis van markdown content.
 

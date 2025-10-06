@@ -1,4 +1,740 @@
-<!DOCTYPE HTML><section id="cat" class="normative"><h2>Gegevensdefinitie</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251006-163844 imvertor 4.4.0--><section id="global_package_SSTP"><h3>Domein   SSTP</h3><section><h4>Objecttypen   </h4>
+<!DOCTYPE HTML><section id="cat" class="normative"><h2>Gegevensdefinitie</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251006-164212 imvertor 4.4.0--><section id="global_package_MMTIS"><h3>Domein   MMTIS</h3><section><h4>Objecttypen   </h4>
+            <section id="global_class_MMTIS_Toegangspunt"><h5>   Toegangspunt</h5>
+               <section id="EAID_D114429B_D4F8_4e03_BE46_FD221985D013"><h6>   Toegangspunt - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_D114429B_D4F8_4e03_BE46_FD221985D013" src="data/Images/EAID_D114429B_D4F8_4e03_BE46_FD221985D013.png" usemap="#imagemap-EAID_D114429B_D4F8_4e03_BE46_FD221985D013" alt="Diagram: Toegangspunt - detail"><figcaption> ‒ Diagram: Toegangspunt</figcaption></figure><map name="imagemap-EAID_D114429B_D4F8_4e03_BE46_FD221985D013"><area shape="rect" alt="Locatie" coords="628,63,817,177" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Gepland stoppunt" coords="351,282,473,378" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Halteplaats" coords="48,278,205,382" href="#global_class_MMTIS_Halteplaats"><area shape="rect" alt="Toegangspunt" coords="154,68,345,172" href="#global_class_MMTIS_Toegangspunt"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Toegangspunt</td></tr><tr><th>Alias</th><td>
+                        <alias>Access Node</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een punt dat reizigers toegang biedt tot een vervoersdienst, bijvoorbeeld een halte, station, instappunt of een specifiek punt binnen een <em>Stop Place</em>.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Toegangspunt_naam">naam</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1 .. *</td></tr></tbody></table>
+               
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Toegangspunt
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Toegangspunt_locatie">heeft als locatie: locatie</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           
+                           [ 1 .. * ]
+                        </td><td>
+                           <p>Gerelateerde Locatie, dat Toegangspunt als locatie heeft.</p>
+                        </td></tr><tr><td>
+                           Toegangspunt
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Toegangspunt_locatieVanBelang">ligt in de buurt van: locatie­Van­Belang</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a>
+                           
+                           [ 0 .. * ]
+                        </td><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Halteplaats"><h5>   Halteplaats</h5>
+               <section id="EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738"><h6>   Halteplaats - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738" src="data/Images/EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738.png" usemap="#imagemap-EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738" alt="Diagram: Halteplaats - detail"><figcaption> ‒ Diagram: Halteplaats</figcaption></figure><map name="imagemap-EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738"><area shape="rect" alt="Doorgang" coords="266,525,389,621" href="#global_class_MMTIS_Doorgang"><area shape="rect" alt="Ingang" coords="82,602,205,697" href="#global_class_MMTIS_Ingang"><area shape="rect" alt="Gepland stoppunt" coords="413,343,536,438" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Locatie" coords="499,63,689,261" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="145,104,336,207" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Halteplaats" coords="117,329,274,454" href="#global_class_MMTIS_Halteplaats"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <section id="EAID_53E02482_D21E_4606_B448_033875280D89"><h6>   Halteplaats «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_53E02482_D21E_4606_B448_033875280D89" src="data/Images/EAID_53E02482_D21E_4606_B448_033875280D89.png" usemap="#imagemap-EAID_53E02482_D21E_4606_B448_033875280D89" alt="Diagram: Halteplaats «traces» - detail"><figcaption> ‒ Diagram: Halteplaats «traces»</figcaption></figure><map name="imagemap-EAID_53E02482_D21E_4606_B448_033875280D89"><area shape="rect" alt="Gepland stoppunt" coords="366,407,489,502" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Perron" coords="453,611,576,707" href="#global_class_MMTIS_Perron"><area shape="rect" alt="Locatie" coords="430,71,620,269" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="75,121,266,225" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Halteplaats" coords="48,296,205,422" href="#global_class_MMTIS_Halteplaats"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Halteplaats</td></tr><tr><th>Alias</th><td>
+                        <alias>Stop Place</alias>
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Halteplaats
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Halteplaats_doorgang">biedt verplaatsingsruimte via: doorgang</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Doorgang">Doorgang</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>
+                           <p>Gerelateerde Doorgang, dat verplaatsingsruimte biedt voor Halteplaats.</p>
+                        </td></tr><tr><td>
+                           Halteplaats
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Halteplaats_stoppunt">bestaat uit: stoppunt</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
+                           
+                           [ 1 .. * ]
+                        </td><td>
+                           <p>Gerelateerde geplande stoppunt, waar Halteplaats uit bestaat.</p>
+                        </td></tr><tr><td>
+                           Halteplaats
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Halteplaats_ingang">is toegankelijk via: ingang</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Ingang">Ingang</a>
+                           
+                           [ 1 .. * ]
+                        </td><td>
+                           <p>Gerelateerde Ingang, dat Halteplaats toegankelijk maakt. </p>
+                        </td></tr><tr><td>
+                           Halteplaats
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a>
+                           
+                        </td><td>
+                           <p>Een punt dat reizigers toegang biedt tot een vervoersdienst, bijvoorbeeld een halte, station, instappunt of een specifiek punt binnen een <em>Stop Place</em>.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Geplandstoppunt"><h5>   Gepland stoppunt</h5>
+               <section id="EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5"><h6>   Gepland stoppunt - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5" src="data/Images/EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5.png" usemap="#imagemap-EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5" alt="Diagram: Gepland stoppunt - detail"><figcaption> ‒ Diagram: Gepland stoppunt</figcaption></figure><map name="imagemap-EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5"><area shape="rect" alt="Locatie" coords="465,82,655,147" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="48,63,239,167" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Gepland stoppunt" coords="82,213,205,277" href="#global_class_MMTIS_Geplandstoppunt"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <section id="EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87"><h6>   Gepland stoppunt «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87" src="data/Images/EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87.png" usemap="#imagemap-EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87" alt="Diagram: Gepland stoppunt «traces» - detail"><figcaption> ‒ Diagram: Gepland stoppunt «traces»</figcaption></figure><map name="imagemap-EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87"><area shape="rect" alt="Locatie" coords="465,82,655,147" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="48,63,239,167" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Gepland stoppunt" coords="82,213,205,277" href="#global_class_MMTIS_Geplandstoppunt"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Gepland stoppunt</td></tr><tr><th>Alias</th><td>
+                        <alias>Scheduled Stop Point</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een punt waar passagiers in- en uit kunnen stappen.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Gepland stoppunt
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a>
+                           
+                        </td><td>
+                           <p>Een punt dat reizigers toegang biedt tot een vervoersdienst, bijvoorbeeld een halte, station, instappunt of een specifiek punt binnen een <em>Stop Place</em>.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Doorgang"><h5>   Doorgang</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Doorgang</td></tr><tr><th>Alias</th><td>
+                        <alias>Acces Space</alias>
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Doorgang
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Doorgang_perron">biedt toegang tot: perron</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Perron">Perron</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>
+                           <p>Gerelateerde perron, dat door Doorgang toegang wordt geboden.</p>
+                        </td></tr><tr><td>
+                           Doorgang
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Doorgang_locatie">heeft als locatie: locatie</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           
+                           [ 1 .. * ]
+                        </td><td>
+                           <p>Gerelateerde Locatie, dat de Doorgang als locatie heeft.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Ingang"><h5>   Ingang</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Ingang</td></tr><tr><th>Alias</th><td>
+                        <alias>Entrance</alias>
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Ingang
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Ingang_locatie">locatie: locatie</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           
+                           [ 1 .. * ]
+                        </td><td>
+                           <p>Gerelateerde Locatie, dat de Ingang als locatie heeft.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Perron"><h5>   Perron</h5>
+               <section id="EAID_1897438B_B135_4f29_9984_184BA4CAC9CF"><h6>   Perron - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_1897438B_B135_4f29_9984_184BA4CAC9CF" src="data/Images/EAID_1897438B_B135_4f29_9984_184BA4CAC9CF.png" usemap="#imagemap-EAID_1897438B_B135_4f29_9984_184BA4CAC9CF" alt="Diagram: Perron - detail"><figcaption> ‒ Diagram: Perron</figcaption></figure><map name="imagemap-EAID_1897438B_B135_4f29_9984_184BA4CAC9CF"><area shape="rect" alt="Gepland stoppunt" coords="48,255,171,351" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Locatie" coords="385,76,574,143" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Perron" coords="48,63,171,158" href="#global_class_MMTIS_Perron"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <section id="EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C"><h6>   Perron «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C" src="data/Images/EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C.png" usemap="#imagemap-EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C" alt="Diagram: Perron «traces» - detail"><figcaption> ‒ Diagram: Perron «traces»</figcaption></figure><map name="imagemap-EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C"><area shape="rect" alt="Gepland stoppunt" coords="48,308,171,404" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Locatie" coords="385,63,574,130" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Perron" coords="48,116,171,211" href="#global_class_MMTIS_Perron"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Perron</td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>De fysieke plek, al dan niet verhoogd, waar voertuigen stoppen zodat passagiers kunnen in- of uitstappen</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Perron
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Perron_stoppunt">bedient: stoppunt</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
+                           
+                           [ 1 .. * ]
+                        </td><td>
+                           <p>Gerelateerde geplande stoppunt, dat door het perron wordt bediend.</p>
+                        </td></tr><tr><td>
+                           Perron
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Perron_locatie">heeft als locatie: locatie</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           
+                           [ 1 .. * ]
+                        </td><td>
+                           <p>Gerelateerde Locatie, dat de Perron heeft.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Locatie"><h5>   Locatie</h5>
+               <section id="EAID_8F566346_5865_4d01_93D1_65148810AAB2"><h6>   Locatie - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_8F566346_5865_4d01_93D1_65148810AAB2" src="data/Images/EAID_8F566346_5865_4d01_93D1_65148810AAB2.png" usemap="#imagemap-EAID_8F566346_5865_4d01_93D1_65148810AAB2" alt="Diagram: Locatie - detail"><figcaption> ‒ Diagram: Locatie</figcaption></figure><map name="imagemap-EAID_8F566346_5865_4d01_93D1_65148810AAB2"><area shape="rect" alt="Tijdvak" coords="654,120,815,242" href="#global_class_MMTIS_Tijdvak"><area shape="rect" alt="Adres" coords="491,351,614,401" href="#global_class_MMTIS_Adres"><area shape="rect" alt="Plaats" coords="273,349,396,401" href="#global_class_MMTIS_Plaats"><area shape="rect" alt="Locatie" coords="329,63,519,243" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Locatie van Belang" coords="48,351,202,401" href="#global_class_MMTIS_LocatievanBelang"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Locatie</td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Locatie_identificatie">identificatie</a>
+                        </td><td>
+                           <p>Unieke aanduiding van een locatie.</p>
+                        </td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Locatie_naam">naam</a>
+                        </td><td>
+                           <p>Tekstuele mensleesbare aanduiding van een locatie.</p>
+                        </td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Locatie_geometrie">geometrie</a>
+                        </td><td>
+                           <p>Puntgeometrie.</p>
+                        </td><td>
+                           GM_Point
+                        </td><td>1</td></tr><tr><td>
+                           tijdvak­Geldigheid
+                        :</td><td>
+                           <p>Het tijdsinterval waarin een locatie geldig is of van toepassing is in de werkelijkheid.</p>
+                        </td><td>
+                           <a class="link" href="#detail_class_MMTIS_Tijdvak">Tijdvak</a>
+                        </td><td>1</td></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_begindatum">begindatum</a>
+                        </td><td>
+                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven begint.</p>
+                        </td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
+                        </td><td>1</td></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_einddatum">einddatum</a>
+                        </td><td>
+                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven eindigt.</p>
+                        </td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
+                        </td><td>0 .. 1</td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Adres"><h5>   Adres</h5>
+               <section id="EAID_05659183_5B14_45a9_93E3_D3B8CF376A84"><h6>   Adres - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_05659183_5B14_45a9_93E3_D3B8CF376A84" src="data/Images/EAID_05659183_5B14_45a9_93E3_D3B8CF376A84.png" usemap="#imagemap-EAID_05659183_5B14_45a9_93E3_D3B8CF376A84" alt="Diagram: Adres - detail"><figcaption> ‒ Diagram: Adres</figcaption></figure><map name="imagemap-EAID_05659183_5B14_45a9_93E3_D3B8CF376A84"><area shape="rect" alt="Wegadres" coords="48,461,244,583" href="#global_class_MMTIS_Wegadres"><area shape="rect" alt="Postadres" coords="315,461,505,636" href="#global_class_MMTIS_Postadres"><area shape="rect" alt="Adres" coords="201,292,323,348" href="#global_class_MMTIS_Adres"><area shape="rect" alt="Locatie" coords="166,63,356,243" href="#global_class_MMTIS_Locatie"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Adres</td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een Adres is een gestructureerde aanduiding van een locatie in de fysieke wereld, bedoeld om een object, gebouw of locatie te identificeren en te vinden.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Adres
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           
+                        </td><td>
+                           <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_LocatievanBelang"><h5>   Locatie van Belang</h5>
+               <section id="EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087"><h6>   Locatie van belang - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087" src="data/Images/EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087.png" usemap="#imagemap-EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087" alt="Diagram: Locatie van belang - detail"><figcaption> ‒ Diagram: Locatie van belang</figcaption></figure><map name="imagemap-EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087"><area shape="rect" alt="TypeLocatieVanBelang" coords="288,293,489,574" href="#global_class_MMTIS_TypeLocatieVanBelang"><area shape="rect" alt="Locatie van Belang" coords="48,297,240,401" href="#global_class_MMTIS_LocatievanBelang"><area shape="rect" alt="Locatie" coords="49,63,239,243" href="#global_class_MMTIS_Locatie"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Locatie van Belang</td></tr><tr><th>Alias</th><td>
+                        <alias>Point of Interest</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een specifieke locatie die relevant is voor reizigers, zoals voorzieningen, herkenningspunten of toeristische attracties, en die kan dienen als vertrekpunt of bestemming van een reis.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_LocatievanBelang_type">type</a>
+                        </td><td>
+                           <p>Aanduiding van het type locatie van belang.</p>
+                        </td><td>
+                           <a class="link" href="#global_class_MMTIS_TypeLocatieVanBelang">Type­Locatie­Van­Belang</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Locatie van Belang
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           
+                        </td><td>
+                           <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Plaats"><h5>   Plaats</h5>
+               <section id="EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6"><h6>   Plaats «traces»- detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6" src="data/Images/EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6.png" usemap="#imagemap-EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6" alt="Diagram: Plaats «traces»- detail"><figcaption> ‒ Diagram: Plaats «traces»- detail</figcaption></figure><map name="imagemap-EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6"><area shape="rect" alt="Plaats" coords="82,341,205,437" href="#global_class_MMTIS_Plaats"><area shape="rect" alt="Locatie" coords="48,104,237,284" href="#global_class_MMTIS_Locatie"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <section id="EAID_D653CE18_17E0_4747_AD06_376CF0F57840"><h6>   Plaats - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_D653CE18_17E0_4747_AD06_376CF0F57840" src="data/Images/EAID_D653CE18_17E0_4747_AD06_376CF0F57840.png" usemap="#imagemap-EAID_D653CE18_17E0_4747_AD06_376CF0F57840" alt="Diagram: Plaats - detail"><figcaption> ‒ Diagram: Plaats</figcaption></figure><map name="imagemap-EAID_D653CE18_17E0_4747_AD06_376CF0F57840"><area shape="rect" alt="Plaats" coords="82,300,205,396" href="#global_class_MMTIS_Plaats"><area shape="rect" alt="Locatie" coords="48,63,237,243" href="#global_class_MMTIS_Locatie"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Plaats</td></tr><tr><th>Alias</th><td>
+                        <alias>Topographic Place</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Type locatie die de topografische context biedt bij het zoeken naar of weergeven van reisinformatie, bijvoorbeeld als vertrek- of aankomstlocatie van een reis.</p>
+                           
+                     </td></tr><tr><th>Toelichting</th><td>
+                        
+                              <p>Een plaats kan variëren van een groot geografisch gebied tot een zeer specifieke locatie, bijvoorbeeld:</p>
+                              <p>“Nederland”, “Randstad”, “Amsterdam-Zuid”, “Binnenhof”, “Utrecht Science Park”.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Plaats
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           
+                        </td><td>
+                           <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Wegadres"><h5>   Wegadres</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Wegadres</td></tr><tr><th>Alias</th><td>
+                        <alias>Road Address</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een adres gebaseerd op een weg- of routeaanduiding.</p>
+                           
+                     </td></tr><tr><th>Toelichting</th><td>
+                        Het beschrijft waar langs een weg een object zich bevindt — bijvoorbeeld een halte, carpoolplaats, of toegang tot een station. 
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Wegadres_wegnaam">wegnaam</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Wegadres_wegnummer">wegnummer</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Wegadres
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_MMTIS_Adres">Adres</a>
+                           
+                        </td><td>
+                           <p>Een Adres is een gestructureerde aanduiding van een locatie in de fysieke wereld, bedoeld om een object, gebouw of locatie te identificeren en te vinden.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Postadres"><h5>   Postadres</h5>
+               <section id="EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E"><h6>   Postadres «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E" src="data/Images/EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E.png" usemap="#imagemap-EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E" alt="Diagram: Postadres «traces» - detail"><figcaption> ‒ Diagram: Postadres «traces»</figcaption></figure><map name="imagemap-EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E"><area shape="rect" alt="Postadres" coords="48,102,237,456" href="#global_class_MMTIS_Postadres"></map><p>
+                              <p></p>
+                           </p></div></section>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Postadres</td></tr><tr><th>Alias</th><td>
+                        <alias>Ne­TEx Postal Address</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een standaard postadres dat wordt gebruikt om een object administratief te identificeren of te communiceren met gebruikers.</p>
+                           
+                     </td></tr><tr><th>Toelichting</th><td>
+                        
+                              <p>Wordt gebruikt als administratief of communicatief adres, bijvoorbeeld:</p>
+                              <p></p>
+                              <p>correspondentieadres van een halte of beheerorganisatie,</p>
+                              <p></p>
+                              <p>fysieke locatie die een reiziger in een navigatiesysteem kan invoeren.</p>
+                              <p></p>
+                              <p>Definitie Adres in de Basisregistratie Adressen en Gebouwen (BAG):</p>
+                              <p>Door het bevoegde gemeentelijke orgaan aan een verblijfsobject, een standplaats of een ligplaats toegekende benaming, bestaande uit een combinatie van de naam van een openbare ruimte, een nummeraanduiding en de naam van een woonplaats</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Postadres_straatnaam">straatnaam</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Postadres_huisnummer">huisnummer</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Postadres_postcode">postcode</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Postadres_plaats">plaats</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Postadres_land">land</a>
+                        </td><td></td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Postadres
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_MMTIS_Adres">Adres</a>
+                           
+                        </td><td>
+                           <p>Een Adres is een gestructureerde aanduiding van een locatie in de fysieke wereld, bedoeld om een object, gebouw of locatie te identificeren en te vinden.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+         </section><section><h4>Gegevensgroeptypen   </h4>
+            <section id="global_class_MMTIS_Tijdvak"><h5>Gegevensgroep   Tijdvak</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Tijdvak</td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een aaneengesloten periode in de tijd, afgebakend door een begindatum en een einddatum.</p>
+                           
+                     </td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_begindatum">begindatum</a>
+                        </td><td>
+                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven begint.</p>
+                        </td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
+                        </td><td>1</td></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_einddatum">einddatum</a>
+                        </td><td>
+                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven eindigt.</p>
+                        </td><td>
+                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
+                        </td><td>0 .. 1</td></tr></tbody></table>
+               
+            </section>
+         </section><section><h4>Enumeraties   </h4>
+            <section id="global_class_MMTIS_TypeLocatieVanBelang"><h5>Enumeratie   Type­Locatie­Van­Belang</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Definitie</th><td>
+                        
+                              <p>Verzameling met typen locatie van belang.</p>
+                           
+                     </td></tr></tbody></table>
+            </section>
+         </section><section><h4>Attribuut- en relatiesoort details  </h4>
+            <section><h5>Objecttype details  </h5>
+               <section id="detail_class_MMTIS_Toegangspunt"><h6>   Toegangspunt</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Toegangspunt_naam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> naam</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>naam</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Toegangspunt_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> heeft als locatie</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als locatie</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Locatie, dat Toegangspunt als locatie heeft.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Toegangspunt_locatieVanBelang"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> ligt in de buurt van</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ligt in de buurt van</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
+                  </div>
+               </section>
+               <section id="detail_class_MMTIS_Halteplaats"><h6>   Halteplaats</h6>
+                  <div class="deepheader" id="detail_association_MMTIS_Halteplaats_doorgang"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Halteplaats">Halteplaats</a> biedt verplaatsingsruimte via</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>biedt verplaatsingsruimte via</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Doorgang, dat verplaatsingsruimte biedt voor Halteplaats.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Doorgang">Doorgang</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Halteplaats_stoppunt"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Halteplaats">Halteplaats</a> bestaat uit</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>bestaat uit</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde geplande stoppunt, waar Halteplaats uit bestaat.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Halteplaats_ingang"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Halteplaats">Halteplaats</a> is toegankelijk via</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is toegankelijk via</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Ingang, dat Halteplaats toegankelijk maakt. </p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Ingang">Ingang</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+               </section>
+               
+               <section id="detail_class_MMTIS_Doorgang"><h6>   Doorgang</h6>
+                  <div class="deepheader" id="detail_association_MMTIS_Doorgang_perron"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Doorgang">Doorgang</a> biedt toegang tot</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>biedt toegang tot</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde perron, dat door Doorgang toegang wordt geboden.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Perron">Perron</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Doorgang_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Doorgang">Doorgang</a> heeft als locatie</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als locatie</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Locatie, dat de Doorgang als locatie heeft.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+               </section>
+               <section id="detail_class_MMTIS_Ingang"><h6>   Ingang</h6>
+                  <div class="deepheader" id="detail_association_MMTIS_Ingang_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Ingang">Ingang</a> locatie</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>locatie</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Locatie, dat de Ingang als locatie heeft.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+               </section>
+               <section id="detail_class_MMTIS_Perron"><h6>   Perron</h6>
+                  <div class="deepheader" id="detail_association_MMTIS_Perron_stoppunt"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Perron">Perron</a> bedient</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>bedient</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde geplande stoppunt, dat door het perron wordt bediend.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Perron_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Perron">Perron</a> heeft als locatie</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als locatie</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Locatie, dat de Perron heeft.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+               </section>
+               <section id="detail_class_MMTIS_Locatie"><h6>   Locatie</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Locatie_identificatie"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Locatie">Locatie</a> identificatie</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>identificatie</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Unieke aanduiding van een locatie.</p>
+                                 
+                           </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Locatie_naam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Locatie">Locatie</a> naam</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>naam</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Tekstuele mensleesbare aanduiding van een locatie.</p>
+                                 
+                           </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Locatie_geometrie"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Locatie">Locatie</a> geometrie</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>geometrie</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Puntgeometrie.</p>
+                                 
+                           </td></tr><tr><th>Formaat</th><td>
+                              GM_Point
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+               </section>
+               
+               <section id="detail_class_MMTIS_LocatievanBelang"><h6>   Locatie van Belang</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_LocatievanBelang_type"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a> type</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>type</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Aanduiding van het type locatie van belang.</p>
+                                 
+                           </td></tr><tr><th>Formaat</th><td>
+                              <a class="link" href="#detail_class_MMTIS_TypeLocatieVanBelang">Type­Locatie­Van­Belang</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+               </section>
+               
+               <section id="detail_class_MMTIS_Wegadres"><h6>   Wegadres</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Wegadres_wegnaam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Wegadres">Wegadres</a> wegnaam</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>wegnaam</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Wegadres_wegnummer"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Wegadres">Wegadres</a> wegnummer</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>wegnummer</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+               </section>
+               <section id="detail_class_MMTIS_Postadres"><h6>   Postadres</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_straatnaam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> straatnaam</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>straatnaam</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_huisnummer"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> huisnummer</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>huisnummer</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_postcode"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> postcode</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>postcode</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_plaats"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> plaats</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>plaats</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_land"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> land</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>land</td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+               </section>
+            </section>
+            <section><h5>Gegevensgroeptype details  </h5>
+               <section id="detail_class_MMTIS_Tijdvak"><h6>Gegevensgroeptype   Tijdvak</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Tijdvak_begindatum"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Tijdvak">Tijdvak</a> begindatum</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>begindatum</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven begint.</p>
+                                 
+                           </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Tijdvak_einddatum"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Tijdvak">Tijdvak</a> einddatum</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>einddatum</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven eindigt.</p>
+                                 
+                           </td></tr><tr><th>Formaat</th><td>
+                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. 1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+               </section>
+            </section>
+            
+            
+            
+            
+         </section></section><section id="global_package_SSTP"><h3>Domein   SSTP</h3><section><h4>Objecttypen   </h4>
             <section id="global_class_SSTP_Veiligeenbeveiligdeparkeerplaats"><h5>   Veilige en beveiligde parkeerplaats</h5>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Veilige en beveiligde parkeerplaats</td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
             </section>
@@ -6109,746 +6845,38 @@ inv xor­Constraint:
             
             
             
-         </section></section><section id="global_package_MMTIS"><h3>Domein   MMTIS</h3><section><h4>Objecttypen   </h4>
-            <section id="global_class_MMTIS_Toegangspunt"><h5>   Toegangspunt</h5>
-               <section id="EAID_D114429B_D4F8_4e03_BE46_FD221985D013"><h6>   Toegangspunt - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_D114429B_D4F8_4e03_BE46_FD221985D013" src="data/Images/EAID_D114429B_D4F8_4e03_BE46_FD221985D013.png" usemap="#imagemap-EAID_D114429B_D4F8_4e03_BE46_FD221985D013" alt="Diagram: Toegangspunt - detail"><figcaption> ‒ Diagram: Toegangspunt</figcaption></figure><map name="imagemap-EAID_D114429B_D4F8_4e03_BE46_FD221985D013"><area shape="rect" alt="Locatie" coords="628,63,817,177" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Gepland stoppunt" coords="351,282,473,378" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Halteplaats" coords="48,278,205,382" href="#global_class_MMTIS_Halteplaats"><area shape="rect" alt="Toegangspunt" coords="154,68,345,172" href="#global_class_MMTIS_Toegangspunt"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Toegangspunt</td></tr><tr><th>Alias</th><td>
-                        <alias>Access Node</alias>
-                     </td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een punt dat reizigers toegang biedt tot een vervoersdienst, bijvoorbeeld een halte, station, instappunt of een specifiek punt binnen een <em>Stop Place</em>.</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
-               <h6>Overzicht attributen  </h6>
-                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Toegangspunt_naam">naam</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1 .. *</td></tr></tbody></table>
-               
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Toegangspunt
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Toegangspunt_locatie">heeft als locatie: locatie</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           
-                           [ 1 .. * ]
-                        </td><td>
-                           <p>Gerelateerde Locatie, dat Toegangspunt als locatie heeft.</p>
-                        </td></tr><tr><td>
-                           Toegangspunt
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Toegangspunt_locatieVanBelang">ligt in de buurt van: locatie­Van­Belang</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a>
-                           
-                           [ 0 .. * ]
-                        </td><td></td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Halteplaats"><h5>   Halteplaats</h5>
-               <section id="EAID_53E02482_D21E_4606_B448_033875280D89"><h6>   Halteplaats «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_53E02482_D21E_4606_B448_033875280D89" src="data/Images/EAID_53E02482_D21E_4606_B448_033875280D89.png" usemap="#imagemap-EAID_53E02482_D21E_4606_B448_033875280D89" alt="Diagram: Halteplaats «traces» - detail"><figcaption> ‒ Diagram: Halteplaats «traces»</figcaption></figure><map name="imagemap-EAID_53E02482_D21E_4606_B448_033875280D89"><area shape="rect" alt="Gepland stoppunt" coords="366,407,489,502" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Perron" coords="453,611,576,707" href="#global_class_MMTIS_Perron"><area shape="rect" alt="Locatie" coords="430,71,620,269" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="75,121,266,225" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Halteplaats" coords="48,296,205,422" href="#global_class_MMTIS_Halteplaats"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <section id="EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738"><h6>   Halteplaats - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738" src="data/Images/EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738.png" usemap="#imagemap-EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738" alt="Diagram: Halteplaats - detail"><figcaption> ‒ Diagram: Halteplaats</figcaption></figure><map name="imagemap-EAID_C2AE70FD_15B3_49c9_B64B_0CD002416738"><area shape="rect" alt="Gepland stoppunt" coords="449,297,572,393" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Locatie" coords="430,59,620,257" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="75,109,266,213" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Halteplaats" coords="48,284,205,409" href="#global_class_MMTIS_Halteplaats"><area shape="rect" alt="Doorgang" coords="348,549,471,644" href="#global_class_MMTIS_Doorgang"><area shape="rect" alt="Ingang" coords="276,424,398,520" href="#global_class_MMTIS_Ingang"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Halteplaats</td></tr><tr><th>Alias</th><td>
-                        <alias>Stop Place</alias>
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Halteplaats
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Halteplaats_doorgang">biedt verplaatsingsruimte via: doorgang</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Doorgang">Doorgang</a>
-                           
-                           [ 0 .. * ]
-                        </td><td>
-                           <p>Gerelateerde Doorgang, dat verplaatsingsruimte biedt voor Halteplaats.</p>
-                        </td></tr><tr><td>
-                           Halteplaats
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Halteplaats_stoppunt">bestaat uit: stoppunt</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
-                           
-                           [ 1 .. * ]
-                        </td><td>
-                           <p>Gerelateerde geplande stoppunt, waar Halteplaats uit bestaat.</p>
-                        </td></tr><tr><td>
-                           Halteplaats
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Halteplaats_ingang">is toegankelijk via: ingang</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Ingang">Ingang</a>
-                           
-                           [ 1 .. * ]
-                        </td><td>
-                           <p>Gerelateerde Ingang, dat Halteplaats toegankelijk maakt. </p>
-                        </td></tr><tr><td>
-                           Halteplaats
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a>
-                           
-                        </td><td>
-                           <p>Een punt dat reizigers toegang biedt tot een vervoersdienst, bijvoorbeeld een halte, station, instappunt of een specifiek punt binnen een <em>Stop Place</em>.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Geplandstoppunt"><h5>   Gepland stoppunt</h5>
-               <section id="EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5"><h6>   Gepland stoppunt - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5" src="data/Images/EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5.png" usemap="#imagemap-EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5" alt="Diagram: Gepland stoppunt - detail"><figcaption> ‒ Diagram: Gepland stoppunt</figcaption></figure><map name="imagemap-EAID_03E53F4D_53A4_4ebe_91FC_5D3F302C14D5"><area shape="rect" alt="Locatie" coords="465,82,655,147" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="48,63,239,167" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Gepland stoppunt" coords="82,213,205,277" href="#global_class_MMTIS_Geplandstoppunt"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <section id="EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87"><h6>   Gepland stoppunt «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87" src="data/Images/EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87.png" usemap="#imagemap-EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87" alt="Diagram: Gepland stoppunt «traces» - detail"><figcaption> ‒ Diagram: Gepland stoppunt «traces»</figcaption></figure><map name="imagemap-EAID_F557DDE0_FE79_4764_B8CD_C1C280B50B87"><area shape="rect" alt="Locatie" coords="465,82,655,147" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Toegangspunt" coords="48,63,239,167" href="#global_class_MMTIS_Toegangspunt"><area shape="rect" alt="Gepland stoppunt" coords="82,213,205,277" href="#global_class_MMTIS_Geplandstoppunt"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Gepland stoppunt</td></tr><tr><th>Alias</th><td>
-                        <alias>Scheduled Stop Point</alias>
-                     </td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een punt waar passagiers in- en uit kunnen stappen.</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Gepland stoppunt
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a>
-                           
-                        </td><td>
-                           <p>Een punt dat reizigers toegang biedt tot een vervoersdienst, bijvoorbeeld een halte, station, instappunt of een specifiek punt binnen een <em>Stop Place</em>.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Doorgang"><h5>   Doorgang</h5>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Doorgang</td></tr><tr><th>Alias</th><td>
-                        <alias>Acces Space</alias>
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Doorgang
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Doorgang_perron">biedt toegang tot: perron</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Perron">Perron</a>
-                           
-                           [ 0 .. * ]
-                        </td><td>
-                           <p>Gerelateerde perron, dat door Doorgang toegang wordt geboden.</p>
-                        </td></tr><tr><td>
-                           Doorgang
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Doorgang_locatie">heeft als locatie: locatie</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           
-                           [ 1 .. * ]
-                        </td><td>
-                           <p>Gerelateerde Locatie, dat de Doorgang als locatie heeft.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Ingang"><h5>   Ingang</h5>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Ingang</td></tr><tr><th>Alias</th><td>
-                        <alias>Entrance</alias>
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Ingang
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Ingang_locatie">locatie: locatie</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           
-                           [ 1 .. * ]
-                        </td><td>
-                           <p>Gerelateerde Locatie, dat de Ingang als locatie heeft.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Perron"><h5>   Perron</h5>
-               <section id="EAID_1897438B_B135_4f29_9984_184BA4CAC9CF"><h6>   Perron - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_1897438B_B135_4f29_9984_184BA4CAC9CF" src="data/Images/EAID_1897438B_B135_4f29_9984_184BA4CAC9CF.png" usemap="#imagemap-EAID_1897438B_B135_4f29_9984_184BA4CAC9CF" alt="Diagram: Perron - detail"><figcaption> ‒ Diagram: Perron</figcaption></figure><map name="imagemap-EAID_1897438B_B135_4f29_9984_184BA4CAC9CF"><area shape="rect" alt="Gepland stoppunt" coords="48,255,171,351" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Locatie" coords="385,76,574,143" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Perron" coords="48,63,171,158" href="#global_class_MMTIS_Perron"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <section id="EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C"><h6>   Perron «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C" src="data/Images/EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C.png" usemap="#imagemap-EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C" alt="Diagram: Perron «traces» - detail"><figcaption> ‒ Diagram: Perron «traces»</figcaption></figure><map name="imagemap-EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C"><area shape="rect" alt="Gepland stoppunt" coords="48,308,171,404" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Locatie" coords="385,63,574,130" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Perron" coords="48,116,171,211" href="#global_class_MMTIS_Perron"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Perron</td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>De fysieke plek, al dan niet verhoogd, waar voertuigen stoppen zodat passagiers kunnen in- of uitstappen</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Perron
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Perron_stoppunt">bedient: stoppunt</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
-                           
-                           [ 1 .. * ]
-                        </td><td>
-                           <p>Gerelateerde geplande stoppunt, dat door het perron wordt bediend.</p>
-                        </td></tr><tr><td>
-                           Perron
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_MMTIS_Perron_locatie">heeft als locatie: locatie</a>
-                           
-                           
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           
-                           [ 1 .. * ]
-                        </td><td>
-                           <p>Gerelateerde Locatie, dat de Perron heeft.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Locatie"><h5>   Locatie</h5>
-               <section id="EAID_8F566346_5865_4d01_93D1_65148810AAB2"><h6>   Locatie - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_8F566346_5865_4d01_93D1_65148810AAB2" src="data/Images/EAID_8F566346_5865_4d01_93D1_65148810AAB2.png" usemap="#imagemap-EAID_8F566346_5865_4d01_93D1_65148810AAB2" alt="Diagram: Locatie - detail"><figcaption> ‒ Diagram: Locatie</figcaption></figure><map name="imagemap-EAID_8F566346_5865_4d01_93D1_65148810AAB2"><area shape="rect" alt="Tijdvak" coords="654,120,815,242" href="#global_class_MMTIS_Tijdvak"><area shape="rect" alt="Adres" coords="491,351,614,401" href="#global_class_MMTIS_Adres"><area shape="rect" alt="Plaats" coords="273,349,396,401" href="#global_class_MMTIS_Plaats"><area shape="rect" alt="Locatie" coords="329,63,519,243" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Locatie van Belang" coords="48,351,202,401" href="#global_class_MMTIS_LocatievanBelang"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Locatie</td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
-               <h6>Overzicht attributen  </h6>
-                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Locatie_identificatie">identificatie</a>
-                        </td><td>
-                           <p>Unieke aanduiding van een locatie.</p>
-                        </td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Locatie_naam">naam</a>
-                        </td><td>
-                           <p>Tekstuele mensleesbare aanduiding van een locatie.</p>
-                        </td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Locatie_geometrie">geometrie</a>
-                        </td><td>
-                           <p>Puntgeometrie.</p>
-                        </td><td>
-                           GM_Point
-                        </td><td>1</td></tr><tr><td>
-                           tijdvak­Geldigheid
-                        :</td><td>
-                           <p>Het tijdsinterval waarin een locatie geldig is of van toepassing is in de werkelijkheid.</p>
-                        </td><td>
-                           <a class="link" href="#detail_class_MMTIS_Tijdvak">Tijdvak</a>
-                        </td><td>1</td></tr><tr><td>- 
-                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_begindatum">begindatum</a>
-                        </td><td>
-                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven begint.</p>
-                        </td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
-                        </td><td>1</td></tr><tr><td>- 
-                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_einddatum">einddatum</a>
-                        </td><td>
-                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven eindigt.</p>
-                        </td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
-                        </td><td>0 .. 1</td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Adres"><h5>   Adres</h5>
-               <section id="EAID_05659183_5B14_45a9_93E3_D3B8CF376A84"><h6>   Adres - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_05659183_5B14_45a9_93E3_D3B8CF376A84" src="data/Images/EAID_05659183_5B14_45a9_93E3_D3B8CF376A84.png" usemap="#imagemap-EAID_05659183_5B14_45a9_93E3_D3B8CF376A84" alt="Diagram: Adres - detail"><figcaption> ‒ Diagram: Adres</figcaption></figure><map name="imagemap-EAID_05659183_5B14_45a9_93E3_D3B8CF376A84"><area shape="rect" alt="Wegadres" coords="48,461,244,583" href="#global_class_MMTIS_Wegadres"><area shape="rect" alt="Postadres" coords="315,461,505,636" href="#global_class_MMTIS_Postadres"><area shape="rect" alt="Adres" coords="201,292,323,348" href="#global_class_MMTIS_Adres"><area shape="rect" alt="Locatie" coords="166,63,356,243" href="#global_class_MMTIS_Locatie"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Adres</td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een Adres is een gestructureerde aanduiding van een locatie in de fysieke wereld, bedoeld om een object, gebouw of locatie te identificeren en te vinden.</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Adres
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           
-                        </td><td>
-                           <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_LocatievanBelang"><h5>   Locatie van Belang</h5>
-               <section id="EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087"><h6>   Locatie van belang - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087" src="data/Images/EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087.png" usemap="#imagemap-EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087" alt="Diagram: Locatie van belang - detail"><figcaption> ‒ Diagram: Locatie van belang</figcaption></figure><map name="imagemap-EAID_1FF090A5_1985_4ad9_B40A_374B7C4E9087"><area shape="rect" alt="TypeLocatieVanBelang" coords="288,293,489,574" href="#global_class_MMTIS_TypeLocatieVanBelang"><area shape="rect" alt="Locatie van Belang" coords="48,297,240,401" href="#global_class_MMTIS_LocatievanBelang"><area shape="rect" alt="Locatie" coords="49,63,239,243" href="#global_class_MMTIS_Locatie"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Locatie van Belang</td></tr><tr><th>Alias</th><td>
-                        <alias>Point of Interest</alias>
-                     </td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een specifieke locatie die relevant is voor reizigers, zoals voorzieningen, herkenningspunten of toeristische attracties, en die kan dienen als vertrekpunt of bestemming van een reis.</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht attributen  </h6>
-                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_LocatievanBelang_type">type</a>
-                        </td><td>
-                           <p>Aanduiding van het type locatie van belang.</p>
-                        </td><td>
-                           <a class="link" href="#global_class_MMTIS_TypeLocatieVanBelang">Type­Locatie­Van­Belang</a>
-                        </td><td>1</td></tr></tbody></table>
-               
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Locatie van Belang
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           
-                        </td><td>
-                           <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Plaats"><h5>   Plaats</h5>
-               <section id="EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6"><h6>   Plaats «traces»- detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6" src="data/Images/EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6.png" usemap="#imagemap-EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6" alt="Diagram: Plaats «traces»- detail"><figcaption> ‒ Diagram: Plaats «traces»- detail</figcaption></figure><map name="imagemap-EAID_C909D1D0_9953_4dc8_BFEF_7E4B8956D3C6"><area shape="rect" alt="Plaats" coords="82,341,205,437" href="#global_class_MMTIS_Plaats"><area shape="rect" alt="Locatie" coords="48,104,237,284" href="#global_class_MMTIS_Locatie"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <section id="EAID_D653CE18_17E0_4747_AD06_376CF0F57840"><h6>   Plaats - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_D653CE18_17E0_4747_AD06_376CF0F57840" src="data/Images/EAID_D653CE18_17E0_4747_AD06_376CF0F57840.png" usemap="#imagemap-EAID_D653CE18_17E0_4747_AD06_376CF0F57840" alt="Diagram: Plaats - detail"><figcaption> ‒ Diagram: Plaats</figcaption></figure><map name="imagemap-EAID_D653CE18_17E0_4747_AD06_376CF0F57840"><area shape="rect" alt="Plaats" coords="82,300,205,396" href="#global_class_MMTIS_Plaats"><area shape="rect" alt="Locatie" coords="48,63,237,243" href="#global_class_MMTIS_Locatie"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Plaats</td></tr><tr><th>Alias</th><td>
-                        <alias>Topographic Place</alias>
-                     </td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Type locatie die de topografische context biedt bij het zoeken naar of weergeven van reisinformatie, bijvoorbeeld als vertrek- of aankomstlocatie van een reis.</p>
-                           
-                     </td></tr><tr><th>Toelichting</th><td>
-                        
-                              <p>Een plaats kan variëren van een groot geografisch gebied tot een zeer specifieke locatie, bijvoorbeeld:</p>
-                              <p>“Nederland”, “Randstad”, “Amsterdam-Zuid”, “Binnenhof”, “Utrecht Science Park”.</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Plaats
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           
-                        </td><td>
-                           <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Wegadres"><h5>   Wegadres</h5>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Wegadres</td></tr><tr><th>Alias</th><td>
-                        <alias>Road Address</alias>
-                     </td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een adres gebaseerd op een weg- of routeaanduiding.</p>
-                           
-                     </td></tr><tr><th>Toelichting</th><td>
-                        Het beschrijft waar langs een weg een object zich bevindt — bijvoorbeeld een halte, carpoolplaats, of toegang tot een station. 
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht attributen  </h6>
-                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Wegadres_wegnaam">wegnaam</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Wegadres_wegnummer">wegnummer</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr></tbody></table>
-               
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Wegadres
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_MMTIS_Adres">Adres</a>
-                           
-                        </td><td>
-                           <p>Een Adres is een gestructureerde aanduiding van een locatie in de fysieke wereld, bedoeld om een object, gebouw of locatie te identificeren en te vinden.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-            <section id="global_class_MMTIS_Postadres"><h5>   Postadres</h5>
-               <section id="EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E"><h6>   Postadres «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E" src="data/Images/EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E.png" usemap="#imagemap-EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E" alt="Diagram: Postadres «traces» - detail"><figcaption> ‒ Diagram: Postadres «traces»</figcaption></figure><map name="imagemap-EAID_467C2D2F_CB14_48a6_8609_E7D07F237A7E"><area shape="rect" alt="Postadres" coords="48,102,237,456" href="#global_class_MMTIS_Postadres"></map><p>
-                              <p></p>
-                           </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Postadres</td></tr><tr><th>Alias</th><td>
-                        <alias>Ne­TEx Postal Address</alias>
-                     </td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een standaard postadres dat wordt gebruikt om een object administratief te identificeren of te communiceren met gebruikers.</p>
-                           
-                     </td></tr><tr><th>Toelichting</th><td>
-                        
-                              <p>Wordt gebruikt als administratief of communicatief adres, bijvoorbeeld:</p>
-                              <p></p>
-                              <p>correspondentieadres van een halte of beheerorganisatie,</p>
-                              <p></p>
-                              <p>fysieke locatie die een reiziger in een navigatiesysteem kan invoeren.</p>
-                              <p></p>
-                              <p>Definitie Adres in de Basisregistratie Adressen en Gebouwen (BAG):</p>
-                              <p>Door het bevoegde gemeentelijke orgaan aan een verblijfsobject, een standplaats of een ligplaats toegekende benaming, bestaande uit een combinatie van de naam van een openbare ruimte, een nummeraanduiding en de naam van een woonplaats</p>
-                           
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht attributen  </h6>
-                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Postadres_straatnaam">straatnaam</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Postadres_huisnummer">huisnummer</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Postadres_postcode">postcode</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Postadres_plaats">plaats</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_MMTIS_Postadres_land">land</a>
-                        </td><td></td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                        </td><td>1</td></tr></tbody></table>
-               
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Postadres
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_MMTIS_Adres">Adres</a>
-                           
-                        </td><td>
-                           <p>Een Adres is een gestructureerde aanduiding van een locatie in de fysieke wereld, bedoeld om een object, gebouw of locatie te identificeren en te vinden.</p>
-                        </td></tr></tbody></table>
-               
-            </section>
-         </section><section><h4>Gegevensgroeptypen   </h4>
-            <section id="global_class_MMTIS_Tijdvak"><h5>Gegevensgroep   Tijdvak</h5>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Tijdvak</td></tr><tr><th>Definitie</th><td>
-                        
-                              <p>Een aaneengesloten periode in de tijd, afgebakend door een begindatum en een einddatum.</p>
-                           
-                     </td></tr></tbody></table>
-               <h6>Overzicht attributen  </h6>
-                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>- 
-                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_begindatum">begindatum</a>
-                        </td><td>
-                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven begint.</p>
-                        </td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
-                        </td><td>1</td></tr><tr><td>- 
-                           <a class="link" href="#detail_attribute_MMTIS_Tijdvak_einddatum">einddatum</a>
-                        </td><td>
-                           <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven eindigt.</p>
-                        </td><td>
-                           <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
-                        </td><td>0 .. 1</td></tr></tbody></table>
-               
-            </section>
-         </section><section><h4>Enumeraties   </h4>
-            <section id="global_class_MMTIS_TypeLocatieVanBelang"><h5>Enumeratie   Type­Locatie­Van­Belang</h5>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Definitie</th><td>
-                        
-                              <p>Verzameling met typen locatie van belang.</p>
-                           
-                     </td></tr></tbody></table>
-            </section>
-         </section><section><h4>Attribuut- en relatiesoort details  </h4>
-            <section><h5>Objecttype details  </h5>
-               <section id="detail_class_MMTIS_Toegangspunt"><h6>   Toegangspunt</h6>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Toegangspunt_naam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> naam</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>naam</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_association_MMTIS_Toegangspunt_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> heeft als locatie</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als locatie</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde Locatie, dat Toegangspunt als locatie heeft.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_association_MMTIS_Toegangspunt_locatieVanBelang"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> ligt in de buurt van</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ligt in de buurt van</td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
-                  </div>
-               </section>
-               <section id="detail_class_MMTIS_Halteplaats"><h6>   Halteplaats</h6>
-                  <div class="deepheader" id="detail_association_MMTIS_Halteplaats_doorgang"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Halteplaats">Halteplaats</a> biedt verplaatsingsruimte via</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>biedt verplaatsingsruimte via</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde Doorgang, dat verplaatsingsruimte biedt voor Halteplaats.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Doorgang">Doorgang</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_association_MMTIS_Halteplaats_stoppunt"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Halteplaats">Halteplaats</a> bestaat uit</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>bestaat uit</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde geplande stoppunt, waar Halteplaats uit bestaat.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_association_MMTIS_Halteplaats_ingang"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Halteplaats">Halteplaats</a> is toegankelijk via</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is toegankelijk via</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde Ingang, dat Halteplaats toegankelijk maakt. </p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Ingang">Ingang</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-               </section>
-               
-               <section id="detail_class_MMTIS_Doorgang"><h6>   Doorgang</h6>
-                  <div class="deepheader" id="detail_association_MMTIS_Doorgang_perron"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Doorgang">Doorgang</a> biedt toegang tot</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>biedt toegang tot</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde perron, dat door Doorgang toegang wordt geboden.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Perron">Perron</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_association_MMTIS_Doorgang_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Doorgang">Doorgang</a> heeft als locatie</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als locatie</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde Locatie, dat de Doorgang als locatie heeft.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-               </section>
-               <section id="detail_class_MMTIS_Ingang"><h6>   Ingang</h6>
-                  <div class="deepheader" id="detail_association_MMTIS_Ingang_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Ingang">Ingang</a> locatie</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>locatie</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde Locatie, dat de Ingang als locatie heeft.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-               </section>
-               <section id="detail_class_MMTIS_Perron"><h6>   Perron</h6>
-                  <div class="deepheader" id="detail_association_MMTIS_Perron_stoppunt"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Perron">Perron</a> bedient</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>bedient</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde geplande stoppunt, dat door het perron wordt bediend.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_association_MMTIS_Perron_locatie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Perron">Perron</a> heeft als locatie</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als locatie</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Gerelateerde Locatie, dat de Perron heeft.</p>
-                                 
-                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_MMTIS_Locatie">Locatie</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-               </section>
-               <section id="detail_class_MMTIS_Locatie"><h6>   Locatie</h6>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Locatie_identificatie"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Locatie">Locatie</a> identificatie</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>identificatie</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Unieke aanduiding van een locatie.</p>
-                                 
-                           </td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Locatie_naam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Locatie">Locatie</a> naam</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>naam</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Tekstuele mensleesbare aanduiding van een locatie.</p>
-                                 
-                           </td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Locatie_geometrie"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Locatie">Locatie</a> geometrie</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>geometrie</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Puntgeometrie.</p>
-                                 
-                           </td></tr><tr><th>Formaat</th><td>
-                              GM_Point
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-               </section>
-               
-               <section id="detail_class_MMTIS_LocatievanBelang"><h6>   Locatie van Belang</h6>
-                  <div class="deepheader" id="detail_attribute_MMTIS_LocatievanBelang_type"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a> type</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>type</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>Aanduiding van het type locatie van belang.</p>
-                                 
-                           </td></tr><tr><th>Formaat</th><td>
-                              <a class="link" href="#detail_class_MMTIS_TypeLocatieVanBelang">Type­Locatie­Van­Belang</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-               </section>
-               
-               <section id="detail_class_MMTIS_Wegadres"><h6>   Wegadres</h6>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Wegadres_wegnaam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Wegadres">Wegadres</a> wegnaam</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>wegnaam</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Wegadres_wegnummer"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Wegadres">Wegadres</a> wegnummer</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>wegnummer</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-               </section>
-               <section id="detail_class_MMTIS_Postadres"><h6>   Postadres</h6>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_straatnaam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> straatnaam</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>straatnaam</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_huisnummer"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> huisnummer</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>huisnummer</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_postcode"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> postcode</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>postcode</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_plaats"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> plaats</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>plaats</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Postadres_land"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Postadres">Postadres</a> land</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>land</td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Character­String</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-               </section>
-            </section>
-            <section><h5>Gegevensgroeptype details  </h5>
-               <section id="detail_class_MMTIS_Tijdvak"><h6>Gegevensgroeptype   Tijdvak</h6>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Tijdvak_begindatum"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Tijdvak">Tijdvak</a> begindatum</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>begindatum</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven begint.</p>
-                                 
-                           </td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-                  <div class="deepheader" id="detail_attribute_MMTIS_Tijdvak_einddatum"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Tijdvak">Tijdvak</a> einddatum</h7>
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>einddatum</td></tr><tr><th>Definitie</th><td>
-                              
-                                    <p>De datum (en eventueel tijd) waarop de geldigheid van het object of gegeven eindigt.</p>
-                                 
-                           </td></tr><tr><th>Formaat</th><td>
-                              <a class="external-link" href="https://docs.geostandaarden.nl/mim/vv-st-mim-20200225/#primitive-datatypes">Date</a>
-                           </td></tr><tr><th>Patroon</th><td>
-                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
-                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. 1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
-                  </div>
-               </section>
-            </section>
-            
-            
-            
-            
-         </section></section></section><section id="lis" class="normative"><h2>Inhoud van waardelijsten</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251006-163844 imvertor 4.4.0--><section><h3>Codelijst inhoud   </h3><section id="detail_class_RTTI_TypeVerkeersbord"><h4>Codelijst details  Type­Verkeersbord</h4>
+         </section></section></section><section id="lis" class="normative"><h2>Inhoud van waardelijsten</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251006-164212 imvertor 4.4.0--><section><h3>Codelijst inhoud   </h3><section id="detail_class_RTTI_TypeVerkeersbord"><h4>Codelijst details  Type­Verkeersbord</h4>
             <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td></td></tr></tbody></table>
             <table style="width: 100%;"><tbody></tbody></table>
-         </section></section><section><h3>Enumeratie inhoud   </h3><section id="detail_class_RTTI_TypeBrandstof"><h4>Enumeratie details  Type­Brandstof</h4>
+         </section></section><section><h3>Enumeratie inhoud   </h3><section id="detail_class_MMTIS_TypeLocatieVanBelang"><h4>Enumeratie details  Type­Locatie­Van­Belang</h4>
+            <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td>
+                     <p>Verzameling met typen locatie van belang.</p>
+                  </td></tr></tbody></table>
+            <table style="width: 100%;" class="list"><colgroup style="width: 10%;"></colgroup><colgroup style="width: 30%;"></colgroup><colgroup style="width: 60%;"></colgroup><tbody><tr><th>Code</th><th>Waarde</th><th>Omschrijving</th></tr><tr><td>administrative building</td><td>overheidsgebouw</td><td>
+                     <p>Gebouw waarin een overheidsdienst of bestuursfunctie is gehuisvest.</p>
+                  </td></tr><tr><td>airport</td><td>luchthaven</td><td>
+                     <p>Faciliteit voor vertrek en aankomst van vliegtuigen, inclusief passagiers- en vrachtverwerking.</p>
+                  </td></tr><tr><td>amenities</td><td>publieke voorziening</td><td>
+                     <p>Publieke voorziening die diensten, eten, winkelen of ontspanning biedt.</p>
+                  </td></tr><tr><td>hospital</td><td>ziekenhuis</td><td>
+                     <p>Medische instelling waar zorg, behandeling en spoedeisende hulp wordt geboden.</p>
+                  </td></tr><tr><td>museum, tourist attraction</td><td>museum, toeristische attractie</td><td>
+                     <p>attractie
+Plaats van cultuur, erfgoed of entertainment die bezoekers trekt.</p>
+                  </td></tr><tr><td>pharmacy</td><td>apotheek</td><td>
+                     <p>Instelling waar geneesmiddelen worden verstrekt en medisch advies wordt gegeven.</p>
+                  </td></tr><tr><td>police station</td><td>politiebureau</td><td>
+                     <p>Gebouw waar politie-functionarissen werken en publieke veiligheid wordt gecoördineerd.</p>
+                  </td></tr><tr><td>port</td><td>haven</td><td>
+                     <p>Faciliteit voor het laden, lossen en aanmeren van schepen.</p>
+                  </td></tr><tr><td>protected site</td><td>beschermde locatie</td><td>
+                     <p>Gebied of object met wettelijke bescherming vanwege natuur, cultuur of erfgoed.</p>
+                  </td></tr><tr><td>rental station</td><td>verhuurlocatie</td><td>
+                     <p>Plaats waar vervoermiddelen zoals fietsen, auto’s of scooters kunnen worden gehuurd.</p>
+                  </td></tr><tr><td>university, school</td><td>onderwijsinstelling</td><td>
+                     <p>Instelling voor onderwijs, van basis- en voortgezet onderwijs tot hoger onderwijs.</p>
+                  </td></tr></tbody></table>
+         </section><section id="detail_class_RTTI_TypeBrandstof"><h4>Enumeratie details  Type­Brandstof</h4>
             <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td></td></tr></tbody></table>
             <table style="width: 100%;" class="list"><colgroup style="width: 10%;"></colgroup><colgroup style="width: 30%;"></colgroup><colgroup style="width: 60%;"></colgroup><tbody><tr><th>Code</th><th>Waarde</th><th>Omschrijving</th></tr><tr><td></td><td>benzine</td><td>
                      <p>Vloeibare fossiele brandstof die wordt gebruikt in verbrandingsmotoren, voornamelijk bij personenauto's en lichte voertuigen.</p>
@@ -7120,33 +7148,5 @@ inv xor­Constraint:
                      <p>niet van toepassing</p>
                   </td></tr><tr><th>NOA</th><td>
                      <p>niet opgesteld voor autoverkeer</p>
-                  </td></tr></tbody></table>
-         </section><section id="detail_class_MMTIS_TypeLocatieVanBelang"><h4>Enumeratie details  Type­Locatie­Van­Belang</h4>
-            <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td>
-                     <p>Verzameling met typen locatie van belang.</p>
-                  </td></tr></tbody></table>
-            <table style="width: 100%;" class="list"><colgroup style="width: 10%;"></colgroup><colgroup style="width: 30%;"></colgroup><colgroup style="width: 60%;"></colgroup><tbody><tr><th>Code</th><th>Waarde</th><th>Omschrijving</th></tr><tr><td>administrative building</td><td>overheidsgebouw</td><td>
-                     <p>Gebouw waarin een overheidsdienst of bestuursfunctie is gehuisvest.</p>
-                  </td></tr><tr><td>airport</td><td>luchthaven</td><td>
-                     <p>Faciliteit voor vertrek en aankomst van vliegtuigen, inclusief passagiers- en vrachtverwerking.</p>
-                  </td></tr><tr><td>amenities</td><td>publieke voorziening</td><td>
-                     <p>Publieke voorziening die diensten, eten, winkelen of ontspanning biedt.</p>
-                  </td></tr><tr><td>hospital</td><td>ziekenhuis</td><td>
-                     <p>Medische instelling waar zorg, behandeling en spoedeisende hulp wordt geboden.</p>
-                  </td></tr><tr><td>museum, tourist attraction</td><td>museum, toeristische attractie</td><td>
-                     <p>attractie
-Plaats van cultuur, erfgoed of entertainment die bezoekers trekt.</p>
-                  </td></tr><tr><td>pharmacy</td><td>apotheek</td><td>
-                     <p>Instelling waar geneesmiddelen worden verstrekt en medisch advies wordt gegeven.</p>
-                  </td></tr><tr><td>police station</td><td>politiebureau</td><td>
-                     <p>Gebouw waar politie-functionarissen werken en publieke veiligheid wordt gecoördineerd.</p>
-                  </td></tr><tr><td>port</td><td>haven</td><td>
-                     <p>Faciliteit voor het laden, lossen en aanmeren van schepen.</p>
-                  </td></tr><tr><td>protected site</td><td>beschermde locatie</td><td>
-                     <p>Gebied of object met wettelijke bescherming vanwege natuur, cultuur of erfgoed.</p>
-                  </td></tr><tr><td>rental station</td><td>verhuurlocatie</td><td>
-                     <p>Plaats waar vervoermiddelen zoals fietsen, auto’s of scooters kunnen worden gehuurd.</p>
-                  </td></tr><tr><td>university, school</td><td>onderwijsinstelling</td><td>
-                     <p>Instelling voor onderwijs, van basis- en voortgezet onderwijs tot hoger onderwijs.</p>
                   </td></tr></tbody></table>
          </section></section></section>

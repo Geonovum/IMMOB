@@ -1,10 +1,10 @@
-<!DOCTYPE HTML><section id="cat" class="normative"><h2>Gegevensdefinitie</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251007-091129 imvertor 4.4.0--><section id="global_package_MMTIS"><h3>Domein   MMTIS</h3><section><h4>Objecttypen   </h4>
+<!DOCTYPE HTML><section id="cat" class="normative"><h2>Gegevensdefinitie</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251010-221337 imvertor 4.4.0--><section id="global_package_MMTIS"><h3>Domein   MMTIS</h3><section><h4>Objecttypen   </h4>
             <section id="global_class_MMTIS_Toegangspunt"><h5>   Toegangspunt</h5>
                <section id="EAID_D114429B_D4F8_4e03_BE46_FD221985D013"><h6>   Toegangspunt - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_D114429B_D4F8_4e03_BE46_FD221985D013" src="data/Images/EAID_D114429B_D4F8_4e03_BE46_FD221985D013.png" usemap="#imagemap-EAID_D114429B_D4F8_4e03_BE46_FD221985D013" alt="Diagram: Toegangspunt - detail"><figcaption> ‒ Diagram: Toegangspunt</figcaption></figure><map name="imagemap-EAID_D114429B_D4F8_4e03_BE46_FD221985D013"><area shape="rect" alt="Locatie" coords="628,63,817,177" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Gepland stoppunt" coords="351,282,473,378" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Halteplaats" coords="48,278,205,382" href="#global_class_MMTIS_Halteplaats"><area shape="rect" alt="Toegangspunt" coords="154,68,345,172" href="#global_class_MMTIS_Toegangspunt"></map><p>
                               <p></p>
                            </p></div></section>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Toegangspunt</td></tr><tr><th>Alias</th><td>
-                        <alias>Access Node</alias>
+                        <alias>ACCESS NODE</alias>
                      </td></tr><tr><th>Definitie</th><td>
                         
                               <p>Een punt dat reizigers toegang biedt tot een vervoersdienst, bijvoorbeeld een halte, station, instappunt of een specifiek punt binnen een <em>Stop Place</em>.</p>
@@ -41,7 +41,31 @@
                               <a class="link" href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a>
                            
                            [ 0 .. * ]
-                        </td><td></td></tr></tbody></table>
+                        </td><td></td></tr><tr><td>
+                           Toegangspunt
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Toegangspunt_dienst">biedt aan: dienst</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Lokaledienst">Lokale dienst</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>
+                           <p>Gerelateerde Lokale dienst, wat Toegangspunt aanbiedt.</p>
+                        </td></tr><tr><td>
+                           Toegangspunt
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Toegangspunt_voorziening">voorziet in: voorziening</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Voorziening">Voorziening</a>
+                           
+                           [ 0 .. * ]
+                        </td><td>
+                           <p>Gerelateerde voorziening, waar Toegangspunt in voorziet.</p>
+                        </td></tr></tbody></table>
                
             </section>
             <section id="global_class_MMTIS_Halteplaats"><h5>   Halteplaats</h5>
@@ -52,7 +76,7 @@
                               <p></p>
                            </p></div></section>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Halteplaats</td></tr><tr><th>Alias</th><td>
-                        <alias>Stop Place</alias>
+                        <alias>STOP PLACE</alias>
                      </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
                <h6>Overzicht relaties  </h6>
                   
@@ -111,7 +135,7 @@
                               <p></p>
                            </p></div></section>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Gepland stoppunt</td></tr><tr><th>Alias</th><td>
-                        <alias>Scheduled Stop Point</alias>
+                        <alias>SCHEDULED STOP POINT</alias>
                      </td></tr><tr><th>Definitie</th><td>
                         
                               <p>Een punt waar passagiers in- en uit kunnen stappen.</p>
@@ -132,7 +156,11 @@
             </section>
             <section id="global_class_MMTIS_Doorgang"><h5>   Doorgang</h5>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Doorgang</td></tr><tr><th>Alias</th><td>
-                        <alias>Acces Space</alias>
+                        <alias>ACCESS SPACE</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een intern gebied of ruimte binnen een Stop Place dat wordt gebruikt door reizigers om zich te verplaatsen van de ingangen naar instappunten (Quays) of andere functionele onderdelen van de halteplaats.</p>
+                           
                      </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
                <h6>Overzicht relaties  </h6>
                   
@@ -165,7 +193,11 @@
             </section>
             <section id="global_class_MMTIS_Ingang"><h5>   Ingang</h5>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Ingang</td></tr><tr><th>Alias</th><td>
-                        <alias>Entrance</alias>
+                        <alias>ENTRANCE</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Een toegangspunt tot een Stop Place waar reizigers de halteplaats kunnen betreden of verlaten.</p>
+                           
                      </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
                <h6>Overzicht relaties  </h6>
                   
@@ -191,7 +223,9 @@
                <section id="EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C"><h6>   Perron «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C" src="data/Images/EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C.png" usemap="#imagemap-EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C" alt="Diagram: Perron «traces» - detail"><figcaption> ‒ Diagram: Perron «traces»</figcaption></figure><map name="imagemap-EAID_C93F4FAE_4861_4b8f_B9B9_2125CBAE2B6C"><area shape="rect" alt="Gepland stoppunt" coords="48,308,171,404" href="#global_class_MMTIS_Geplandstoppunt"><area shape="rect" alt="Locatie" coords="385,63,574,130" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Perron" coords="48,116,171,211" href="#global_class_MMTIS_Perron"></map><p>
                               <p></p>
                            </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Perron</td></tr><tr><th>Definitie</th><td>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Perron</td></tr><tr><th>Alias</th><td>
+                        <alias>QUAY</alias>
+                     </td></tr><tr><th>Definitie</th><td>
                         
                               <p>De fysieke plek, al dan niet verhoogd, waar voertuigen stoppen zodat passagiers kunnen in- of uitstappen</p>
                            
@@ -225,11 +259,185 @@
                         </td></tr></tbody></table>
                
             </section>
+            <section id="global_class_MMTIS_Routeknooppunt"><h5>   Routeknooppunt</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Routeknooppunt</td></tr><tr><th>Alias</th><td>
+                        <alias>PATH JUNCTION</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Punt waar twee of meer routeverbindingen samenkomen of aftakken.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+            </section>
+            <section id="global_class_MMTIS_Apparatuurplaats"><h5>   Apparatuurplaats</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Apparatuurplaats</td></tr><tr><th>Alias</th><td>
+                        <alias>EQUIPMENT PLACE</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Deel van een Stop Place waar specifieke apparatuur of voorzieningen zich bevinden.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Apparatuurplaats
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Apparatuurplaats_halteplaats">bevindt zich in: halteplaats</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Halteplaats">Halteplaats</a>
+                           
+                           [ 1 ]
+                        </td><td>
+                           <p>Gerelateerde halteplaats, waar Apparatuurplaats zich in bevindt.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Voorziening"><h5>   Voorziening</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Voorziening</td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Algemene aanduiding van beschikbare functies of diensten (toiletten, wachtruimte, wifi).</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+            </section>
+            <section id="global_class_MMTIS_Lokaledienst"><h5>   Lokale dienst</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Lokale dienst</td></tr><tr><th>Alias</th><td>
+                        <alias>LOCAL SERVICE</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Dienst die binnen of nabij de Access Node wordt aangeboden (taxi, fietsverhuur, horeca).</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+            </section>
+            <section id="global_class_MMTIS_Instappositie"><h5>   Instappositie</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Instappositie</td></tr><tr><th>Alias</th><td>
+                        <alias>BOARDING POSITION</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Fysieke positie op een perron waar een voertuig stopt.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Instappositie
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Instappositie_routeverbinding">ligt aan: routeverbinding</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Routeverbinding">Routeverbinding</a>
+                           
+                           [ 1 ]
+                        </td><td>
+                           <p>Gerelateerde routeverbinding, waar instappositie aan gelegen is.</p>
+                        </td></tr><tr><td>
+                           Instappositie
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Instappositie_stoppunt">realiseert: stoppunt</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
+                           
+                           [ 1 .. * ]
+                        </td><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Routeverbinding"><h5>   Routeverbinding</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Routeverbinding</td></tr><tr><th>Alias</th><td>
+                        <alias>PATH LINK</alias>
+                     </td></tr><tr><th>Definitie</th><td>
+                        
+                              <p>Segment van een looproute binnen een Stop Place.</p>
+                           
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Routeverbinding
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Routeverbinding_doorgang">ligt in: doorgang</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Doorgang">Doorgang</a>
+                           
+                           [ 1 ]
+                        </td><td>
+                           <p>Gerelateerde doorgang, waar Routeverbinding in is gelegen.</p>
+                        </td></tr><tr><td>
+                           Routeverbinding
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Routeverbinding_eindknoop">heeft als eindpunt: eindknoop</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Routeknooppunt">Routeknooppunt</a>
+                           
+                           [ 1 ]
+                        </td><td></td></tr><tr><td>
+                           Routeverbinding
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Routeverbinding_beginknoop">heeft als beginpunt: beginknoop</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Routeknooppunt">Routeknooppunt</a>
+                           
+                           [ 1 ]
+                        </td><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_MMTIS_Apparaat"><h5>   Apparaat</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Apparaat</td></tr><tr><th>Alias</th><td>
+                        <alias>EQUIPMENT</alias>
+                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
+                           <a class="link" href="#detail_attribute_MMTIS_Apparaat_type">type</a>
+                        </td><td>
+                           <p>Soort apparaat.</p>
+                        </td><td>
+                           <a class="link" href="#global_class_MMTIS_TypeApparaat">Type­Apparaat</a>
+                        </td><td>1</td></tr></tbody></table>
+               
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Apparaat
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Apparaat_apparatuurplaats">bevindt zich in: apparatuurplaats</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Apparatuurplaats">Apparatuurplaats</a>
+                           
+                           [ 1 ]
+                        </td><td>
+                           <p>Gerelateerde apparatuurplaats, waar Apparaat in is gelegen.</p>
+                        </td></tr><tr><td>
+                           Apparaat
+                           [ 1 ]
+                           
+                              <a class="link" href="#detail_association_MMTIS_Apparaat_positie">is gepositioneerd op: positie</a>
+                           
+                           
+                              <a class="link" href="#global_class_MMTIS_Apparaatpositie">Apparaatpositie</a>
+                           
+                           [ 1 ]
+                        </td><td>
+                           <p>Gerelateerde Apparaatpositie, waar Apparaat is gepositioneerd.</p>
+                        </td></tr></tbody></table>
+               
+            </section>
             <section id="global_class_MMTIS_Locatie"><h5>   Locatie</h5>
                <section id="EAID_8F566346_5865_4d01_93D1_65148810AAB2"><h6>   Locatie - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_8F566346_5865_4d01_93D1_65148810AAB2" src="data/Images/EAID_8F566346_5865_4d01_93D1_65148810AAB2.png" usemap="#imagemap-EAID_8F566346_5865_4d01_93D1_65148810AAB2" alt="Diagram: Locatie - detail"><figcaption> ‒ Diagram: Locatie</figcaption></figure><map name="imagemap-EAID_8F566346_5865_4d01_93D1_65148810AAB2"><area shape="rect" alt="Tijdvak" coords="654,120,815,242" href="#global_class_MMTIS_Tijdvak"><area shape="rect" alt="Adres" coords="491,351,614,401" href="#global_class_MMTIS_Adres"><area shape="rect" alt="Plaats" coords="273,349,396,401" href="#global_class_MMTIS_Plaats"><area shape="rect" alt="Locatie" coords="329,63,519,243" href="#global_class_MMTIS_Locatie"><area shape="rect" alt="Locatie van Belang" coords="48,351,202,401" href="#global_class_MMTIS_LocatievanBelang"></map><p>
                               <p></p>
                            </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Locatie</td></tr><tr><th>Definitie</th><td>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Locatie</td></tr><tr><th>Alias</th><td>
+                        <alias>LOCATION</alias>
+                     </td></tr><tr><th>Definitie</th><td>
                         
                               <p>Een fysiek of logisch punt in de ruimte dat kan worden gebruikt als vertrek-, aankomst- of tussenpunt bij reis- of vervoersinformatie, of als aanduiding van een geografische positie van een object of voorziening.</p>
                            
@@ -278,7 +486,9 @@
                <section id="EAID_05659183_5B14_45a9_93E3_D3B8CF376A84"><h6>   Adres - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_05659183_5B14_45a9_93E3_D3B8CF376A84" src="data/Images/EAID_05659183_5B14_45a9_93E3_D3B8CF376A84.png" usemap="#imagemap-EAID_05659183_5B14_45a9_93E3_D3B8CF376A84" alt="Diagram: Adres - detail"><figcaption> ‒ Diagram: Adres</figcaption></figure><map name="imagemap-EAID_05659183_5B14_45a9_93E3_D3B8CF376A84"><area shape="rect" alt="Wegadres" coords="48,461,244,583" href="#global_class_MMTIS_Wegadres"><area shape="rect" alt="Postadres" coords="315,461,505,636" href="#global_class_MMTIS_Postadres"><area shape="rect" alt="Adres" coords="201,292,323,348" href="#global_class_MMTIS_Adres"><area shape="rect" alt="Locatie" coords="166,63,356,243" href="#global_class_MMTIS_Locatie"></map><p>
                               <p></p>
                            </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Adres</td></tr><tr><th>Definitie</th><td>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Adres</td></tr><tr><th>Alias</th><td>
+                        <alias>ADDRESS</alias>
+                     </td></tr><tr><th>Definitie</th><td>
                         
                               <p>Een Adres is een gestructureerde aanduiding van een locatie in de fysieke wereld, bedoeld om een object, gebouw of locatie te identificeren en te vinden.</p>
                            
@@ -361,9 +571,15 @@
                         </td></tr></tbody></table>
                
             </section>
+            <section id="global_class_MMTIS_ParkRide"><h5>   Park &amp; Ride</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Park &amp; Ride</td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+            </section>
+            <section id="global_class_MMTIS_Parkeerplaats"><h5>   Parkeerplaats</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Parkeerplaats</td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+            </section>
             <section id="global_class_MMTIS_Wegadres"><h5>   Wegadres</h5>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Wegadres</td></tr><tr><th>Alias</th><td>
-                        <alias>Road Address</alias>
+                        <alias>ROAD ADDRESS</alias>
                      </td></tr><tr><th>Definitie</th><td>
                         
                               <p>Een adres gebaseerd op een weg- of routeaanduiding.</p>
@@ -400,7 +616,7 @@
                               <p></p>
                            </p></div></section>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Postadres</td></tr><tr><th>Alias</th><td>
-                        <alias>Ne­TEx Postal Address</alias>
+                        <alias>NETEX POSTAL ADDRESS</alias>
                      </td></tr><tr><th>Definitie</th><td>
                         
                               <p>Een standaard postadres dat wordt gebruikt om een object administratief te identificeren of te communiceren met gebruikers.</p>
@@ -454,6 +670,18 @@
                
             </section>
          </section><section><h4>Gegevensgroeptypen   </h4>
+            <section id="global_class_MMTIS_Apparaatpositie"><h5>Gegevensgroep   Apparaatpositie</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Apparaatpositie</td></tr><tr><th>Alias</th><td>
+                        <alias>EQUIPMENT POSITION</alias>
+                     </td></tr></tbody></table>
+               <h6>Overzicht attributen  </h6>
+                  <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>- 
+                           <a class="link" href="#detail_attribute_MMTIS_Apparaatpositie_geometrie">geometrie</a>
+                        </td><td></td><td>
+                           GM_Point
+                        </td><td>1</td></tr></tbody></table>
+               
+            </section>
             <section id="global_class_MMTIS_Tijdvak"><h5>Gegevensgroep   Tijdvak</h5>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Tijdvak</td></tr><tr><th>Definitie</th><td>
                         
@@ -477,6 +705,13 @@
                
             </section>
          </section><section><h4>Enumeraties   </h4>
+            <section id="global_class_MMTIS_TypeApparaat"><h5>Enumeratie   Type­Apparaat</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Definitie</th><td>
+                        
+                              <p>Lijst met classificaties voor het soort apparaat.</p>
+                           
+                     </td></tr></tbody></table>
+            </section>
             <section id="global_class_MMTIS_TypeLocatieVanBelang"><h5>Enumeratie   Type­Locatie­Van­Belang</h5>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Definitie</th><td>
                         
@@ -508,6 +743,26 @@
                      
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ligt in de buurt van</td></tr><tr><th>Gerelateerd objecttype</th><td>
                               <a class="link" href="#global_class_MMTIS_LocatievanBelang">Locatie van Belang</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Toegangspunt_dienst"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> biedt aan</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>biedt aan</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Lokale dienst, wat Toegangspunt aanbiedt.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Lokaledienst">Lokale dienst</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Toegangspunt_voorziening"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Toegangspunt">Toegangspunt</a> voorziet in</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>voorziet in</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde voorziening, waar Toegangspunt in voorziet.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Voorziening">Voorziening</a>
                            </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
                   </div>
                </section>
@@ -600,6 +855,96 @@
                            </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
                   </div>
                </section>
+               
+               <section id="detail_class_MMTIS_Apparatuurplaats"><h6>   Apparatuurplaats</h6>
+                  <div class="deepheader" id="detail_association_MMTIS_Apparatuurplaats_halteplaats"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Apparatuurplaats">Apparatuurplaats</a> bevindt zich in</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>bevindt zich in</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde halteplaats, waar Apparatuurplaats zich in bevindt.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Halteplaats">Halteplaats</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr></tbody></table>
+                  </div>
+               </section>
+               
+               
+               <section id="detail_class_MMTIS_Instappositie"><h6>   Instappositie</h6>
+                  <div class="deepheader" id="detail_association_MMTIS_Instappositie_routeverbinding"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Instappositie">Instappositie</a> ligt aan</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ligt aan</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde routeverbinding, waar instappositie aan gelegen is.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Routeverbinding">Routeverbinding</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Instappositie_stoppunt"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Instappositie">Instappositie</a> realiseert</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>realiseert</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Geplandstoppunt">Gepland stoppunt</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
+                  </div>
+               </section>
+               <section id="detail_class_MMTIS_Routeverbinding"><h6>   Routeverbinding</h6>
+                  <div class="deepheader" id="detail_association_MMTIS_Routeverbinding_doorgang"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Routeverbinding">Routeverbinding</a> ligt in</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>ligt in</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde doorgang, waar Routeverbinding in is gelegen.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Doorgang">Doorgang</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Routeverbinding_eindknoop"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Routeverbinding">Routeverbinding</a> heeft als eindpunt</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als eindpunt</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Routeknooppunt">Routeknooppunt</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Routeverbinding_beginknoop"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Routeverbinding">Routeverbinding</a> heeft als beginpunt</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>heeft als beginpunt</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Routeknooppunt">Routeknooppunt</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr></tbody></table>
+                  </div>
+               </section>
+               <section id="detail_class_MMTIS_Apparaat"><h6>   Apparaat</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Apparaat_type"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Apparaat">Apparaat</a> type</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>type</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Soort apparaat.</p>
+                                 
+                           </td></tr><tr><th>Formaat</th><td>
+                              <a class="link" href="#detail_class_MMTIS_TypeApparaat">Type­Apparaat</a>
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Apparaat_apparatuurplaats"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Apparaat">Apparaat</a> bevindt zich in</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>bevindt zich in</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde apparatuurplaats, waar Apparaat in is gelegen.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Apparatuurplaats">Apparatuurplaats</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr></tbody></table>
+                  </div>
+                  <div class="deepheader" id="detail_association_MMTIS_Apparaat_positie"><h7>Relatiesoort details  <a href="#global_class_MMTIS_Apparaat">Apparaat</a> is gepositioneerd op</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is gepositioneerd op</td></tr><tr><th>Definitie</th><td>
+                              
+                                    <p>Gerelateerde Apparaatpositie, waar Apparaat is gepositioneerd.</p>
+                                 
+                           </td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_MMTIS_Apparaatpositie">Apparaatpositie</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr></tbody></table>
+                  </div>
+               </section>
                <section id="detail_class_MMTIS_Locatie"><h6>   Locatie</h6>
                   <div class="deepheader" id="detail_attribute_MMTIS_Locatie_identificatie"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Locatie">Locatie</a> identificatie</h7>
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>identificatie</td></tr><tr><th>Definitie</th><td>
@@ -649,6 +994,8 @@
                            </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
                   </div>
                </section>
+               
+               
                
                <section id="detail_class_MMTIS_Wegadres"><h6>   Wegadres</h6>
                   <div class="deepheader" id="detail_attribute_MMTIS_Wegadres_wegnaam"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Wegadres">Wegadres</a> wegnaam</h7>
@@ -705,6 +1052,15 @@
                </section>
             </section>
             <section><h5>Gegevensgroeptype details  </h5>
+               <section id="detail_class_MMTIS_Apparaatpositie"><h6>Gegevensgroeptype   Apparaatpositie</h6>
+                  <div class="deepheader" id="detail_attribute_MMTIS_Apparaatpositie_geometrie"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Apparaatpositie">Apparaatpositie</a> geometrie</h7>
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>geometrie</td></tr><tr><th>Formaat</th><td>
+                              GM_Point
+                           </td></tr><tr><th>Patroon</th><td>
+                              De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
+                           </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
+                  </div>
+               </section>
                <section id="detail_class_MMTIS_Tijdvak"><h6>Gegevensgroeptype   Tijdvak</h6>
                   <div class="deepheader" id="detail_attribute_MMTIS_Tijdvak_begindatum"><h7>Attribuutsoort details  <a href="#global_class_MMTIS_Tijdvak">Tijdvak</a> begindatum</h7>
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>begindatum</td></tr><tr><th>Definitie</th><td>
@@ -740,7 +1096,7 @@
             </section>
          </section></section><section id="global_package_RTTI"><h3>Domein   RTTI</h3><section id="EAID_05AE8D40_DD89_4937_A7D6_3059B8B5D175"><h4>   RTTI 1. De soorten infrastructuurgegevens - overzicht</h4><div class="imageinfo overview"><figure class="uml-diagram"><img id="EAID_05AE8D40_DD89_4937_A7D6_3059B8B5D175" src="data/Images/EAID_05AE8D40_DD89_4937_A7D6_3059B8B5D175.png" usemap="#imagemap-EAID_05AE8D40_DD89_4937_A7D6_3059B8B5D175" alt="Diagram: RTTI 1. De soorten infrastructuurgegevens - overzicht"><figcaption> ‒ Diagram: RTTI 1. De soorten infrastructuurgegevens</figcaption></figure><map name="imagemap-EAID_05AE8D40_DD89_4937_A7D6_3059B8B5D175"><area shape="rect" alt="Gasvulpunt" coords="100,715,222,808" href="#global_class_RTTI_Gasvulpunt"><area shape="rect" alt="Brandstoftankstation" coords="258,572,385,620" href="#global_class_RTTI_Brandstoftankstation"><area shape="rect" alt="Gastankstation" coords="100,572,222,620" href="#global_class_RTTI_Gastankstation"><area shape="rect" alt="Brandstofvulpunt" coords="262,715,416,808" href="#global_class_RTTI_Brandstofvulpunt"><area shape="rect" alt="Voertuigenergiestation" coords="288,315,487,373" href="#global_class_RTTI_Voertuigenergiestation"><area shape="rect" alt="Laadpunt" coords="487,614,641,671" href="#global_class_RTTI_Laadpunt"><area shape="rect" alt="Tankstation" coords="167,464,321,521" href="#global_class_RTTI_Tankstation"><area shape="rect" alt="Laadstation" coords="483,471,637,528" href="#global_class_RTTI_Laadstation"><area shape="rect" alt="Tolstation" coords="729,244,883,302" href="#global_class_RTTI_Tolstation"><area shape="rect" alt="Verzorgingsplaats" coords="551,244,706,302" href="#global_class_RTTI_Verzorgingsplaats"><area shape="rect" alt="Wegknoop" coords="329,82,483,139" href="#global_class_RTTI_Wegknoop"><area shape="rect" alt="Weglink" coords="691,78,845,135" href="#global_class_RTTI_Weglink"></map><p>
                         <p></p>
-                     </p></div></section><section id="EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883"><h4>   RTTI 4. De cruciale soorten gegevens over de toestand van het netwerk - overzicht</h4><div class="imageinfo overview"><figure class="uml-diagram"><img id="EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883" src="data/Images/EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883.png" usemap="#imagemap-EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883" alt="Diagram: RTTI 4. De cruciale soorten gegevens over de toestand van het netwerk - overzicht"><figcaption> ‒ Diagram: RTTI 4. De cruciale soorten gegevens over de toestand van het netwerk</figcaption></figure><map name="imagemap-EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883"><area shape="rect" alt="Wegwerkzaamheden" coords="744,63,867,158" href="#global_class_RTTI_Wegwerkzaamheden"><area shape="rect" alt="Rijstrook" coords="577,378,700,474" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="177,393,300,489" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegafsluiting" coords="131,248,348,322" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Rijstrookafsluiting" coords="570,248,693,306" href="#global_class_RTTI_Rijstrookafsluiting"><area shape="rect" alt="Afsluiting" coords="411,63,534,158" href="#global_class_RTTI_Afsluiting"></map><p>
+                     </p></div></section><section id="EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883"><h4>   RTTI 4. De cruciale soorten gegevens over de toestand van het netwerk - overzicht</h4><div class="imageinfo overview"><figure class="uml-diagram"><img id="EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883" src="data/Images/EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883.png" usemap="#imagemap-EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883" alt="Diagram: RTTI 4. De cruciale soorten gegevens over de toestand van het netwerk - overzicht"><figcaption> ‒ Diagram: RTTI 4. De cruciale soorten gegevens over de toestand van het netwerk</figcaption></figure><map name="imagemap-EAID_0EDE1C47_4F86_4c42_AAB2_FE06FA7C4883"><area shape="rect" alt="Wegwerkzaamheid" coords="744,63,867,158" href="#global_class_RTTI_Wegwerkzaamheid"><area shape="rect" alt="Rijstrook" coords="577,378,700,474" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="177,393,300,489" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegafsluiting" coords="131,248,348,322" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Rijstrookafsluiting" coords="570,248,693,306" href="#global_class_RTTI_Rijstrookafsluiting"><area shape="rect" alt="Afsluiting" coords="411,63,613,158" href="#global_class_RTTI_Afsluiting"></map><p>
                         <p></p>
                      </p></div></section><section id="EAID_6F9B3EB8_46AF_44eb_9E41_F26B9268214B"><h4>   RTTI 6. De soorten gegevens over het gebruik van het netwerk in realtime - overzicht</h4><div class="imageinfo overview"><figure class="uml-diagram"><img id="EAID_6F9B3EB8_46AF_44eb_9E41_F26B9268214B" src="data/Images/EAID_6F9B3EB8_46AF_44eb_9E41_F26B9268214B.png" usemap="#imagemap-EAID_6F9B3EB8_46AF_44eb_9E41_F26B9268214B" alt="Diagram: RTTI 6. De soorten gegevens over het gebruik van het netwerk in realtime - overzicht"><figcaption> ‒ Diagram: RTTI 6. De soorten gegevens over het gebruik van het netwerk in realtime</figcaption></figure><map name="imagemap-EAID_6F9B3EB8_46AF_44eb_9E41_F26B9268214B"></map><p>
                         <p></p>
@@ -1952,8 +2308,25 @@ https://wetten.overheid.nl/BWBR0004825/2024-07-01</p>
                         </td><td></td></tr></tbody></table>
                
             </section>
+            <section id="global_class_RTTI_Tijdelijkeverkeersbeheersmaatregel"><h5>   Tijdelijke verkeersbeheersmaatregel</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Tijdelijke verkeersbeheersmaatregel</td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Tijdelijke verkeersbeheersmaatregel
+                           [ 1 .. * ]
+                           
+                              <a class="link" href="#detail_association_RTTI_Tijdelijkeverkeersbeheersmaatregel_verkeersmanagementplan">is opgenomen in: verkeersmanagementplan</a>
+                           
+                           
+                              <a class="link" href="#global_class_RTTI_VerkeersManagementPlanTMP">Verkeers Management Plan (TMP)</a>
+                           
+                           [ 0 .. * ]
+                        </td><td></td></tr></tbody></table>
+               
+            </section>
             <section id="global_class_RTTI_Afsluiting"><h5>   Afsluiting</h5>
-               <section id="EAID_35FE779E_647C_4d62_B5DD_4571820339DA"><h6>   Afsluiting - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_35FE779E_647C_4d62_B5DD_4571820339DA" src="data/Images/EAID_35FE779E_647C_4d62_B5DD_4571820339DA.png" usemap="#imagemap-EAID_35FE779E_647C_4d62_B5DD_4571820339DA" alt="Diagram: Afsluiting - detail"><figcaption> ‒ Diagram: Afsluiting</figcaption></figure><map name="imagemap-EAID_35FE779E_647C_4d62_B5DD_4571820339DA"><area shape="rect" alt="TypeWegbeheerder" coords="486,63,609,220" href="#detail_class_RTTI_TypeWegbeheerder"><area shape="rect" alt="Wegbeheerder" coords="112,85,270,188" href="#global_class_RTTI_Wegbeheerder"><area shape="rect" alt="TypeAfsluiting" coords="416,325,539,446" href="#detail_class_RTTI_TypeAfsluiting"><area shape="rect" alt="Wegafsluiting" coords="236,487,359,547" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Rijstrookafsluiting" coords="48,487,171,547" href="#global_class_RTTI_Rijstrookafsluiting"><area shape="rect" alt="Periode" coords="584,323,727,446" href="#global_class_RTTI_Periode"><area shape="rect" alt="Afsluiting" coords="94,224,326,381" href="#global_class_RTTI_Afsluiting"></map><p>
+               <section id="EAID_35FE779E_647C_4d62_B5DD_4571820339DA"><h6>   Afsluiting - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_35FE779E_647C_4d62_B5DD_4571820339DA" src="data/Images/EAID_35FE779E_647C_4d62_B5DD_4571820339DA.png" usemap="#imagemap-EAID_35FE779E_647C_4d62_B5DD_4571820339DA" alt="Diagram: Afsluiting - detail"><figcaption> ‒ Diagram: Afsluiting</figcaption></figure><map name="imagemap-EAID_35FE779E_647C_4d62_B5DD_4571820339DA"><area shape="rect" alt="Rijbaanafsluiting" coords="48,565,171,628" href="#global_class_RTTI_Rijbaanafsluiting"><area shape="rect" alt="Verkeers Management Plan (TMP)" coords="877,64,1000,160" href="#global_class_RTTI_VerkeersManagementPlanTMP"><area shape="rect" alt="Tijdelijke verkeersbeheersmaatregel" coords="435,63,599,158" href="#global_class_RTTI_Tijdelijkeverkeersbeheersmaatregel"><area shape="rect" alt="TypeWegbeheerder" coords="94,303,217,460" href="#detail_class_RTTI_TypeWegbeheerder"><area shape="rect" alt="Wegbeheerder" coords="278,172,437,276" href="#global_class_RTTI_Wegbeheerder"><area shape="rect" alt="TypeAfsluiting" coords="615,506,738,628" href="#detail_class_RTTI_TypeAfsluiting"><area shape="rect" alt="Wegafsluiting" coords="435,573,558,633" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Rijstrookafsluiting" coords="247,573,370,633" href="#global_class_RTTI_Rijstrookafsluiting"><area shape="rect" alt="Periode" coords="783,505,927,628" href="#global_class_RTTI_Periode"><area shape="rect" alt="Afsluiting" coords="295,310,527,467" href="#global_class_RTTI_Afsluiting"></map><p>
                               <p></p>
                            </p></div></section>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Afsluiting</td></tr><tr><th>Indicatie abstract object</th><td>Ja</td></tr></tbody></table>
@@ -1986,9 +2359,19 @@ https://wetten.overheid.nl/BWBR0004825/2024-07-01</p>
                            DATETIME
                         </td><td>1</td></tr></tbody></table>
                
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Afsluiting
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_RTTI_Tijdelijkeverkeersbeheersmaatregel">Tijdelijke verkeersbeheersmaatregel</a>
+                           
+                        </td><td></td></tr></tbody></table>
+               
             </section>
             <section id="global_class_RTTI_Wegafsluiting"><h5>   Wegafsluiting</h5>
-               <section id="EAID_BE6000DF_3C24_4cad_B554_39A19113A25F"><h6>   Wegafsluiting - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_BE6000DF_3C24_4cad_B554_39A19113A25F" src="data/Images/EAID_BE6000DF_3C24_4cad_B554_39A19113A25F.png" usemap="#imagemap-EAID_BE6000DF_3C24_4cad_B554_39A19113A25F" alt="Diagram: Wegafsluiting - detail"><figcaption> ‒ Diagram: Wegafsluiting</figcaption></figure><map name="imagemap-EAID_BE6000DF_3C24_4cad_B554_39A19113A25F"><area shape="rect" alt="Weglink" coords="53,538,269,591" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegafsluiting" coords="52,318,269,392" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Afsluiting" coords="314,59,517,221" href="#global_class_RTTI_Afsluiting"></map><p>
+               <section id="EAID_BE6000DF_3C24_4cad_B554_39A19113A25F"><h6>   Wegafsluiting - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_BE6000DF_3C24_4cad_B554_39A19113A25F" src="data/Images/EAID_BE6000DF_3C24_4cad_B554_39A19113A25F.png" usemap="#imagemap-EAID_BE6000DF_3C24_4cad_B554_39A19113A25F" alt="Diagram: Wegafsluiting - detail"><figcaption> ‒ Diagram: Wegafsluiting</figcaption></figure><map name="imagemap-EAID_BE6000DF_3C24_4cad_B554_39A19113A25F"><area shape="rect" alt="Weglink" coords="53,577,269,630" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegafsluiting" coords="52,366,269,439" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Afsluiting" coords="87,63,291,247" href="#global_class_RTTI_Afsluiting"></map><p>
                               <p></p>
                            </p></div></section>
                <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Wegafsluiting</td></tr><tr><th>Definitie</th><td>
@@ -2012,6 +2395,19 @@ https://wetten.overheid.nl/BWBR0004825/2024-07-01</p>
                            [ 1 .. * ]
                         </td><td></td></tr><tr><td>
                            Wegafsluiting
+                           is specialisatie van
+                           
+                              <a class="link" href="#global_class_RTTI_Afsluiting">Afsluiting</a>
+                           
+                        </td><td></td></tr></tbody></table>
+               
+            </section>
+            <section id="global_class_RTTI_Rijbaanafsluiting"><h5>   Rijbaanafsluiting</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Rijbaanafsluiting</td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
+               <h6>Overzicht relaties  </h6>
+                  
+                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
+                           Rijbaanafsluiting
                            is specialisatie van
                            
                               <a class="link" href="#global_class_RTTI_Afsluiting">Afsluiting</a>
@@ -2046,40 +2442,37 @@ https://wetten.overheid.nl/BWBR0004825/2024-07-01</p>
                         </td><td></td></tr></tbody></table>
                
             </section>
-            <section id="global_class_RTTI_Tijdelijkeverkeersbeheersmaatregel"><h5>   Tijdelijke verkeersbeheersmaatregel</h5>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Tijdelijke verkeersbeheersmaatregel</td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-            </section>
-            <section id="global_class_RTTI_Wegwerkzaamheden"><h5>   Wegwerkzaamheden</h5>
-               <section id="EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B"><h6>   Wegwerkzaamheden zonder «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B" src="data/Images/EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B.png" usemap="#imagemap-EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B" alt="Diagram: Wegwerkzaamheden zonder «traces» - detail"><figcaption> ‒ Diagram: Wegwerkzaamheden zonder «traces»</figcaption></figure><map name="imagemap-EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B"><area shape="rect" alt="Wegafsluiting" coords="287,584,504,705" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Sluitingstype" coords="574,1030,697,1152" href="#detail_class_RTTI_Sluitingstype"><area shape="rect" alt="Rijstrookafsluiting" coords="486,424,673,520" href="#global_class_RTTI_Rijstrookafsluiting"><area shape="rect" alt="Sluiting van wegen" coords="139,423,348,519" href="#global_class_RTTI_Sluitingvanwegen"><area shape="rect" alt="PuntOfLijn" coords="418,1037,540,1159" href="#global_class_RTTI_PuntOfLijn"><area shape="rect" alt="Periode" coords="749,1029,954,1150" href="#global_class_RTTI_Periode"><area shape="rect" alt="Duurtype" coords="1034,1021,1157,1152" href="#detail_class_RTTI_Duurtype"><area shape="rect" alt="Rijstrook" coords="630,154,753,250" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="210,104,426,302" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegwerkzaamheden" coords="749,520,1090,759" href="#global_class_RTTI_Wegwerkzaamheden"><area shape="rect" alt="TypeWegwerkzaamheid" coords="741,802,999,1003" href="#detail_class_RTTI_TypeWegwerkzaamheid"><area shape="rect" alt="PlanningstypeWegwerkzaamheden" coords="1034,802,1240,924" href="#detail_class_RTTI_PlanningstypeWegwerkzaamheden"></map><p>
+            <section id="global_class_RTTI_Wegwerkzaamheid"><h5>   Wegwerkzaamheid</h5>
+               <section id="EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B"><h6>   Wegwerkzaamheid zonder «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B" src="data/Images/EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B.png" usemap="#imagemap-EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B" alt="Diagram: Wegwerkzaamheid zonder «traces» - detail"><figcaption> ‒ Diagram: Wegwerkzaamheid zonder «traces»</figcaption></figure><map name="imagemap-EAID_0A3CD6F5_49A1_40f9_9223_D2C5E5E54D5B"><area shape="rect" alt="Wegafsluiting" coords="287,584,504,705" href="#global_class_RTTI_Wegafsluiting"><area shape="rect" alt="Sluitingstype" coords="574,1030,697,1152" href="#detail_class_RTTI_Sluitingstype"><area shape="rect" alt="Rijstrookafsluiting" coords="486,424,673,520" href="#global_class_RTTI_Rijstrookafsluiting"><area shape="rect" alt="PuntOfLijn" coords="418,1037,540,1159" href="#global_class_RTTI_PuntOfLijn"><area shape="rect" alt="Periode" coords="749,1029,954,1150" href="#global_class_RTTI_Periode"><area shape="rect" alt="Duurtype" coords="1034,1021,1157,1152" href="#detail_class_RTTI_Duurtype"><area shape="rect" alt="Rijstrook" coords="630,154,753,250" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="210,104,426,302" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegwerkzaamheid" coords="749,520,1090,759" href="#global_class_RTTI_Wegwerkzaamheid"><area shape="rect" alt="TypeWegwerkzaamheid" coords="741,802,999,1003" href="#detail_class_RTTI_TypeWegwerkzaamheid"><area shape="rect" alt="PlanningstypeWegwerkzaamheden" coords="1034,802,1240,924" href="#detail_class_RTTI_PlanningstypeWegwerkzaamheden"></map><p>
                               <p></p>
                            </p></div></section>
-               <section id="EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643"><h6>   Wegwerkzaamheden met «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643" src="data/Images/EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643.png" usemap="#imagemap-EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643" alt="Diagram: Wegwerkzaamheden met «traces» - detail"><figcaption> ‒ Diagram: Wegwerkzaamheden met «traces»</figcaption></figure><map name="imagemap-EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643"><area shape="rect" alt="PuntOfLijn" coords="116,318,239,439" href="#global_class_RTTI_PuntOfLijn"><area shape="rect" alt="Periode" coords="671,413,876,535" href="#global_class_RTTI_Periode"><area shape="rect" alt="Duurtype" coords="300,595,423,726" href="#detail_class_RTTI_Duurtype"><area shape="rect" alt="Rijstrook" coords="685,127,808,222" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="322,63,538,261" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegwerkzaamheden" coords="293,318,635,557" href="#global_class_RTTI_Wegwerkzaamheden"><area shape="rect" alt="TypeWegwerkzaamheid" coords="41,1060,299,1648" href="#detail_class_RTTI_TypeWegwerkzaamheid"><area shape="rect" alt="PlanningstypeWegwerkzaamheden" coords="300,753,506,875" href="#detail_class_RTTI_PlanningstypeWegwerkzaamheden"></map><p>
+               <section id="EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643"><h6>   Wegwerkzaamheden met «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643" src="data/Images/EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643.png" usemap="#imagemap-EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643" alt="Diagram: Wegwerkzaamheden met «traces» - detail"><figcaption> ‒ Diagram: Wegwerkzaamheden met «traces»</figcaption></figure><map name="imagemap-EAID_0C34D435_251A_4f0a_8450_7F1FEFF29643"><area shape="rect" alt="PuntOfLijn" coords="116,318,239,439" href="#global_class_RTTI_PuntOfLijn"><area shape="rect" alt="Periode" coords="671,413,876,535" href="#global_class_RTTI_Periode"><area shape="rect" alt="Duurtype" coords="300,595,423,726" href="#detail_class_RTTI_Duurtype"><area shape="rect" alt="Rijstrook" coords="685,127,808,222" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="322,63,538,261" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegwerkzaamheid" coords="293,318,635,557" href="#global_class_RTTI_Wegwerkzaamheid"><area shape="rect" alt="TypeWegwerkzaamheid" coords="41,1060,299,1648" href="#detail_class_RTTI_TypeWegwerkzaamheid"><area shape="rect" alt="PlanningstypeWegwerkzaamheden" coords="300,753,506,875" href="#detail_class_RTTI_PlanningstypeWegwerkzaamheden"></map><p>
                               <p></p>
                            </p></div></section>
                <section id="EAID_4A7C8236_152A_45c1_AF96_4F2E1B353D8E"><h6>   Type­Wegwerkzaamheid met «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_4A7C8236_152A_45c1_AF96_4F2E1B353D8E" src="data/Images/EAID_4A7C8236_152A_45c1_AF96_4F2E1B353D8E.png" usemap="#imagemap-EAID_4A7C8236_152A_45c1_AF96_4F2E1B353D8E" alt="Diagram: TypeWegwerkzaamheid met «traces» - detail"><figcaption> ‒ Diagram: Type­Wegwerkzaamheid met «traces»</figcaption></figure><map name="imagemap-EAID_4A7C8236_152A_45c1_AF96_4F2E1B353D8E"><area shape="rect" alt="TypeWegwerkzaamheid" coords="211,282,469,871" href="#detail_class_RTTI_TypeWegwerkzaamheid"></map><p>
                               <p></p>
                            </p></div></section>
-               <section id="EAID_B33545BE_14FE_48f5_8212_EBB5749642BB"><h6>   Wegwerkzaamheden zoomin op gegevenstypen met «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_B33545BE_14FE_48f5_8212_EBB5749642BB" src="data/Images/EAID_B33545BE_14FE_48f5_8212_EBB5749642BB.png" usemap="#imagemap-EAID_B33545BE_14FE_48f5_8212_EBB5749642BB" alt="Diagram: Wegwerkzaamheden zoomin op gegevenstypen met «traces» - detail"><figcaption> ‒ Diagram: Wegwerkzaamheden zoomin op gegevenstypen met «traces»</figcaption></figure><map name="imagemap-EAID_B33545BE_14FE_48f5_8212_EBB5749642BB"><area shape="rect" alt="PuntOfLijn" coords="74,333,196,454" href="#global_class_RTTI_PuntOfLijn"><area shape="rect" alt="Periode" coords="622,450,827,572" href="#global_class_RTTI_Periode"><area shape="rect" alt="Duurtype" coords="258,610,381,741" href="#detail_class_RTTI_Duurtype"><area shape="rect" alt="Rijstrook" coords="577,127,700,222" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="232,68,448,266" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegwerkzaamheden" coords="251,333,592,572" href="#global_class_RTTI_Wegwerkzaamheden"><area shape="rect" alt="PlanningstypeWegwerkzaamheden" coords="258,768,464,890" href="#detail_class_RTTI_PlanningstypeWegwerkzaamheden"></map><p>
+               <section id="EAID_B33545BE_14FE_48f5_8212_EBB5749642BB"><h6>   Wegwerkzaamheden zoomin op gegevenstypen met «traces» - detail</h6><div class="imageinfo "><figure class="uml-diagram"><img id="EAID_B33545BE_14FE_48f5_8212_EBB5749642BB" src="data/Images/EAID_B33545BE_14FE_48f5_8212_EBB5749642BB.png" usemap="#imagemap-EAID_B33545BE_14FE_48f5_8212_EBB5749642BB" alt="Diagram: Wegwerkzaamheden zoomin op gegevenstypen met «traces» - detail"><figcaption> ‒ Diagram: Wegwerkzaamheden zoomin op gegevenstypen met «traces»</figcaption></figure><map name="imagemap-EAID_B33545BE_14FE_48f5_8212_EBB5749642BB"><area shape="rect" alt="PuntOfLijn" coords="74,333,196,454" href="#global_class_RTTI_PuntOfLijn"><area shape="rect" alt="Periode" coords="622,450,827,572" href="#global_class_RTTI_Periode"><area shape="rect" alt="Duurtype" coords="258,610,381,741" href="#detail_class_RTTI_Duurtype"><area shape="rect" alt="Rijstrook" coords="577,127,700,222" href="#global_class_RTTI_Rijstrook"><area shape="rect" alt="Weglink" coords="232,68,448,266" href="#global_class_RTTI_Weglink"><area shape="rect" alt="Wegwerkzaamheid" coords="251,333,592,572" href="#global_class_RTTI_Wegwerkzaamheid"><area shape="rect" alt="PlanningstypeWegwerkzaamheden" coords="258,768,464,890" href="#detail_class_RTTI_PlanningstypeWegwerkzaamheden"></map><p>
                               <p></p>
                            </p></div></section>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Wegwerkzaamheden</td></tr><tr><th>Alias</th><td>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Wegwerkzaamheid</td></tr><tr><th>Alias</th><td>
                         <alias>Roadworks</alias>
                      </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
                <h6>Overzicht attributen  </h6>
                   <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 50%;"></colgroup><colgroup style="width: 10%;"></colgroup><colgroup style="width: 10%;"></colgroup><tbody><tr><th>Attribuutnaam</th><th>Definitie</th><th>Formaat</th><th>Card</th></tr><tr><td>
-                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheden_duurtype">duurtype</a>
+                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheid_duurtype">duurtype</a>
                         </td><td></td><td>
                            Duurtype
                         </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheden_planningstype">planningstype</a>
+                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheid_planningstype">planningstype</a>
                         </td><td></td><td>
                            Planningstype­Wegwerkzaamheden
                         </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheden_geometrie">geometrie</a>
+                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheid_geometrie">geometrie</a>
                         </td><td></td><td>
                            <a class="link" href="#global_class_RTTI_PuntOfLijn">Punt­Of­Lijn</a>
                         </td><td>1</td></tr><tr><td>
-                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheden_typewegwerkzaamheid">type wegwerkzaamheid</a>
+                           <a class="link" href="#detail_attribute_RTTI_Wegwerkzaamheid_typewegwerkzaamheid">type wegwerkzaamheid</a>
                         </td><td></td><td>
                            Type­Wegwerkzaamheid
                         </td><td>1 .. *</td></tr><tr><td>
@@ -2101,20 +2494,20 @@ https://wetten.overheid.nl/BWBR0004825/2024-07-01</p>
                <h6>Overzicht relaties  </h6>
                   
                   <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Wegwerkzaamheden
+                           Wegwerkzaamheid
                            [ 1 ]
                            
-                              <a class="link" href="#detail_association_RTTI_Wegwerkzaamheden_afsluiting">leidt tot: afsluiting</a>
+                              <a class="link" href="#detail_association_RTTI_Wegwerkzaamheid_afsluiting">leidt tot: afsluiting</a>
                            
                            
                               <a class="link" href="#global_class_RTTI_Afsluiting">Afsluiting</a>
                            
                            [ 0 .. * ]
                         </td><td></td></tr><tr><td>
-                           Wegwerkzaamheden
+                           Wegwerkzaamheid
                            [ 1 ]
                            
-                              <a class="link" href="#detail_association_RTTI_Wegwerkzaamheden_isvantoepassingop">is van toepassing op</a>
+                              <a class="link" href="#detail_association_RTTI_Wegwerkzaamheid_isvantoepassingop">is van toepassing op</a>
                            
                            
                               <a class="link" href="#global_class_RTTI_Rijstrook">Rijstrook</a>
@@ -2123,32 +2516,8 @@ https://wetten.overheid.nl/BWBR0004825/2024-07-01</p>
                         </td><td></td></tr></tbody></table>
                
             </section>
-            <section id="global_class_RTTI_Sluitingvanwegen"><h5>   Sluiting van wegen</h5>
-               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Sluiting van wegen</td></tr><tr><th>Toelichting</th><td>
-                        Een eenduidige beschrijving van wegafsluitingen vereist het verstrekken van informatie over hun geldigheidsduur (van toepassing op geplande wegafsluitingen) of het tijdstip van optreden (van toepassing op ongeplande wegafsluitingen).
-                     </td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
-               <h6>Overzicht relaties  </h6>
-                  
-                  <table style="width: 100%;"><colgroup style="width: 50%;"></colgroup><colgroup style="width: 50%;"></colgroup><tbody><tr><th>Rol naam met kardinaliteiten</th><th>Definitie</th></tr><tr><td>
-                           Sluiting van wegen
-                           [ 1 ]
-                           
-                              <a class="link" href="#detail_association_RTTI_Sluitingvanwegen_weglink">is van toepassing op: weglink</a>
-                           
-                           
-                              <a class="link" href="#global_class_RTTI_Weglink">Weglink</a>
-                           
-                           [ 1 .. * ]
-                        </td><td></td></tr><tr><td>
-                           Sluiting van wegen
-                           is specialisatie van
-                           
-                              <a class="link" href="#global_class_RTTI_Wegafsluiting">Wegafsluiting</a>
-                           
-                        </td><td>
-                           <p>Afsluiting van een wegverbinding.</p>
-                        </td></tr></tbody></table>
-               
+            <section id="global_class_RTTI_VerkeersManagementPlanTMP"><h5>   Verkeers Management Plan (TMP)</h5>
+               <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>Verkeers Management Plan (TMP)</td></tr><tr><th>Indicatie abstract object</th><td>Nee</td></tr></tbody></table>
             </section>
          </section><section><h4>Keuzen   </h4>
             <section id="global_class_RTTI_KeuzeWegvakOfWegverbinding"><h5>   Keuze­Wegvak­Of­Wegverbinding</h5>
@@ -3015,6 +3384,14 @@ inv xor­Constraint:
                            </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
                   </div>
                </section>
+               <section id="detail_class_RTTI_Tijdelijkeverkeersbeheersmaatregel"><h6>   Tijdelijke verkeersbeheersmaatregel</h6>
+                  <div class="deepheader" id="detail_association_RTTI_Tijdelijkeverkeersbeheersmaatregel_verkeersmanagementplan"><h7>Relatiesoort details  <a href="#global_class_RTTI_Tijdelijkeverkeersbeheersmaatregel">Tijdelijke verkeersbeheersmaatregel</a> is opgenomen in</h7>
+                     
+                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is opgenomen in</td></tr><tr><th>Gerelateerd objecttype</th><td>
+                              <a class="link" href="#global_class_RTTI_VerkeersManagementPlanTMP">Verkeers Management Plan (TMP)</a>
+                           </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
+                  </div>
+               </section>
                <section id="detail_class_RTTI_Afsluiting"><h6>   Afsluiting</h6>
                   <div class="deepheader" id="detail_attribute_RTTI_Afsluiting_typeafsluiting"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Afsluiting">Afsluiting</a> type afsluiting</h7>
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>type afsluiting</td></tr><tr><th>Formaat</th><td>
@@ -3032,6 +3409,7 @@ inv xor­Constraint:
                            </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
                   </div>
                </section>
+               
                <section id="detail_class_RTTI_Rijstrookafsluiting"><h6>   Rijstrookafsluiting</h6>
                   <div class="deepheader" id="detail_association_RTTI_Rijstrookafsluiting_rijstrook"><h7>Relatiesoort details  <a href="#global_class_RTTI_Rijstrookafsluiting">Rijstrookafsluiting</a> rijstrook</h7>
                      
@@ -3040,57 +3418,49 @@ inv xor­Constraint:
                            </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
                   </div>
                </section>
-               
-               <section id="detail_class_RTTI_Wegwerkzaamheden"><h6>   Wegwerkzaamheden</h6>
-                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheden_duurtype"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheden">Wegwerkzaamheden</a> duurtype</h7>
+               <section id="detail_class_RTTI_Wegwerkzaamheid"><h6>   Wegwerkzaamheid</h6>
+                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheid_duurtype"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheid">Wegwerkzaamheid</a> duurtype</h7>
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>duurtype</td></tr><tr><th>Formaat</th><td>
                               <a class="link" href="#detail_class_RTTI_Duurtype">Duurtype</a>
                            </td></tr><tr><th>Patroon</th><td>
                               De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
                            </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
                   </div>
-                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheden_planningstype"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheden">Wegwerkzaamheden</a> planningstype</h7>
+                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheid_planningstype"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheid">Wegwerkzaamheid</a> planningstype</h7>
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>planningstype</td></tr><tr><th>Formaat</th><td>
                               <a class="link" href="#detail_class_RTTI_PlanningstypeWegwerkzaamheden">Planningstype­Wegwerkzaamheden</a>
                            </td></tr><tr><th>Patroon</th><td>
                               De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
                            </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
                   </div>
-                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheden_geometrie"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheden">Wegwerkzaamheden</a> geometrie</h7>
+                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheid_geometrie"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheid">Wegwerkzaamheid</a> geometrie</h7>
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>geometrie</td></tr><tr><th>Formaat</th><td>
                               <a class="link" href="#detail_class_RTTI_PuntOfLijn">Punt­Of­Lijn</a>
                            </td></tr><tr><th>Patroon</th><td>
                               De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
                            </td></tr><tr><th>Kardinaliteit</th><td>1</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
                   </div>
-                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheden_typewegwerkzaamheid"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheden">Wegwerkzaamheden</a> type wegwerkzaamheid</h7>
+                  <div class="deepheader" id="detail_attribute_RTTI_Wegwerkzaamheid_typewegwerkzaamheid"><h7>Attribuutsoort details  <a href="#global_class_RTTI_Wegwerkzaamheid">Wegwerkzaamheid</a> type wegwerkzaamheid</h7>
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>type wegwerkzaamheid</td></tr><tr><th>Formaat</th><td>
                               <a class="link" href="#detail_class_RTTI_TypeWegwerkzaamheid">Type­Wegwerkzaamheid</a>
                            </td></tr><tr><th>Patroon</th><td>
                               De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.
                            </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr><tr><th>Indicatie identificerend</th><td>Nee</td></tr></tbody></table>
                   </div>
-                  <div class="deepheader" id="detail_association_RTTI_Wegwerkzaamheden_afsluiting"><h7>Relatiesoort details  <a href="#global_class_RTTI_Wegwerkzaamheden">Wegwerkzaamheden</a> leidt tot</h7>
+                  <div class="deepheader" id="detail_association_RTTI_Wegwerkzaamheid_afsluiting"><h7>Relatiesoort details  <a href="#global_class_RTTI_Wegwerkzaamheid">Wegwerkzaamheid</a> leidt tot</h7>
                      
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>leidt tot</td></tr><tr><th>Gerelateerd objecttype</th><td>
                               <a class="link" href="#global_class_RTTI_Afsluiting">Afsluiting</a>
                            </td></tr><tr><th>Kardinaliteit</th><td>0 .. *</td></tr></tbody></table>
                   </div>
-                  <div class="deepheader" id="detail_association_RTTI_Wegwerkzaamheden_isvantoepassingop"><h7>Relatiesoort details  <a href="#global_class_RTTI_Wegwerkzaamheden">Wegwerkzaamheden</a> is van toepassing op</h7>
+                  <div class="deepheader" id="detail_association_RTTI_Wegwerkzaamheid_isvantoepassingop"><h7>Relatiesoort details  <a href="#global_class_RTTI_Wegwerkzaamheid">Wegwerkzaamheid</a> is van toepassing op</h7>
                      
                      <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is van toepassing op</td></tr><tr><th>Gerelateerd objecttype</th><td>
                               <a class="link" href="#global_class_RTTI_Rijstrook">Rijstrook</a>
                            </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
                   </div>
                </section>
-               <section id="detail_class_RTTI_Sluitingvanwegen"><h6>   Sluiting van wegen</h6>
-                  <div class="deepheader" id="detail_association_RTTI_Sluitingvanwegen_weglink"><h7>Relatiesoort details  <a href="#global_class_RTTI_Sluitingvanwegen">Sluiting van wegen</a> is van toepassing op</h7>
-                     
-                     <table style="width: 100%;"><colgroup style="width: 30%;"></colgroup><colgroup style="width: 70%;"></colgroup><tbody><tr><th>Naam</th><td>is van toepassing op</td></tr><tr><th>Gerelateerd objecttype</th><td>
-                              <a class="link" href="#global_class_RTTI_Weglink">Weglink</a>
-                           </td></tr><tr><th>Kardinaliteit</th><td>1 .. *</td></tr></tbody></table>
-                  </div>
-               </section>
+               
             </section>
             <section><h5>Gegevensgroeptype details  </h5>
                <section id="detail_class_RTTI_Wegclassificatie"><h6>Gegevensgroeptype   Wegclassificatie</h6>
@@ -6845,10 +7215,29 @@ inv xor­Constraint:
             
             
             
-         </section></section></section><section id="lis" class="normative"><h2>Inhoud van waardelijsten</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251007-091129 imvertor 4.4.0--><section><h3>Codelijst inhoud   </h3><section id="detail_class_RTTI_TypeVerkeersbord"><h4>Codelijst details  Type­Verkeersbord</h4>
+         </section></section></section><section id="lis" class="normative"><h2>Inhoud van waardelijsten</h2><!--MIMCM-IMMOB-conceptueel-1.0-1-20250414-20251010-221337 imvertor 4.4.0--><section><h3>Codelijst inhoud   </h3><section id="detail_class_RTTI_TypeVerkeersbord"><h4>Codelijst details  Type­Verkeersbord</h4>
             <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td></td></tr></tbody></table>
             <table style="width: 100%;"><tbody></tbody></table>
-         </section></section><section><h3>Enumeratie inhoud   </h3><section id="detail_class_MMTIS_TypeLocatieVanBelang"><h4>Enumeratie details  Type­Locatie­Van­Belang</h4>
+         </section></section><section><h3>Enumeratie inhoud   </h3><section id="detail_class_MMTIS_TypeApparaat"><h4>Enumeratie details  Type­Apparaat</h4>
+            <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td>
+                     <p>Lijst met classificaties voor het soort apparaat.</p>
+                  </td></tr></tbody></table>
+            <table style="width: 100%;" class="list"><colgroup style="width: 10%;"></colgroup><colgroup style="width: 30%;"></colgroup><colgroup style="width: 60%;"></colgroup><tbody><tr><th>Code</th><th>Waarde</th><th>Omschrijving</th></tr><tr><td>INFORMATION EQUIPMENT</td><td>informatiescherm</td><td>
+                     <p>Apparaat dat dynamische reisinformatie toont (zoals vertrektijden).</p>
+                  </td></tr><tr><td>LIFT EQUIPMENT</td><td>lift</td><td>
+                     <p>Apparaat dat reizigers verticaal verplaatst tussen niveaus binnen een halte (bijv. van passage naar perron).</p>
+                  </td></tr><tr><td>ESCALATOR EQUIPMENT</td><td>roltrap</td><td>
+                     <p>Apparaat dat reizigers automatisch omhoog of omlaag transporteert.</p>
+                  </td></tr><tr><td></td><td>ticketapparaat</td><td>
+                     <p>Apparaat dat wordt gebruikt voor de verkoop of validatie van vervoersbewijzen (bijv. kaartautomaat, OV-chipkaartlezer).</p>
+                  </td></tr><tr><td>ENTRANCE EQUIPMENT</td><td>toegangspoort</td><td>
+                     <p>Apparaat dat toegang verleent tot of controleert bij een ingang van de halte (bijv. toegangspoortje of tourniquet).</p>
+                  </td></tr><tr><td>SAFETY EQUIPMENT</td><td>veiligheidsvoorziening</td><td>
+                     <p>Apparaat dat de veiligheid waarborgt (bijv. brandmelder, noodknop, camera).</p>
+                  </td></tr><tr><td>LIGHTING EQUIPMENT</td><td>verlichting</td><td>
+                     <p>Apparaat dat zorgt voor verlichting van de halteplaats of doorgang.</p>
+                  </td></tr></tbody></table>
+         </section><section id="detail_class_MMTIS_TypeLocatieVanBelang"><h4>Enumeratie details  Type­Locatie­Van­Belang</h4>
             <table style="width: 100%;" class="list"><colgroup></colgroup><tbody><tr><td>
                      <p>Verzameling met typen locatie van belang.</p>
                   </td></tr></tbody></table>

@@ -3,7 +3,7 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
-  title: "Informatiemodel Real-time Verkeersinformatie (IM RTVI)",
+  title: "Informatiemodel Mobiliteit (IMMOB)",
   subtitle: "Gegevenscatalogus Mobiliteitsdata",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   specStatus: "wv",                   // Werkversie

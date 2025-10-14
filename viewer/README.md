@@ -11,7 +11,7 @@ Klik [hier](https://geonovum.github.io/IMMOB/viewer/?uri_id=https%3A%2F%2Fdocs.g
 ## Werkwijze
 
 ### Stap 1: Exporteer UML naar XMI
-- Exporteer het UML-model naar een XMI-bestand.
+- Exporteer het UML-model naar een XMI-bestand (versie 1.1).
 - **Belangrijk:** Doe dit op het **hoogste niveau van het Package**.  
   - Alleen elementen in dit package worden in de link graph getoond.  
   - Elementen die niet in de XMI zitten, verschijnen niet in de viewer.  

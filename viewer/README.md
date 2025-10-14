@@ -34,3 +34,25 @@ De viewer is te benaderen via: [https://geonovum.github.io/IMMOB/viewer/](https:
 - Open een opdrachtprompt en voer de volgende opdracht uit:
   ```bash
   java -jar saxon-he-12.5.jar -s:xmi-bestand.xmi -xsl:xmi2nlsbb.xsl -o:model.json
+
+--- 
+
+### Stap 3: Voeg JSON toe aan de viewer
+
+- Plaats model.json in de map viewer in de GitHub-repository.
+Bijvoorbeeld:
+
+IMMOB/
+  └── viewer/
+       └── model.json
+
+
+- Commit en push de wijzigingen naar GitHub.
+
+- Open de viewer in je browser; deze werkt nu automatisch met het nieuwe model.json.
+
+---
+### Opmerkingen
+
+- Controleer altijd of het XMI alle benodigde elementen bevat voordat je de transformatie uitvoert.
+- De viewer gebruikt de JSON-LD structuur voor het tekenen van de link graph en het leggen van relaties.

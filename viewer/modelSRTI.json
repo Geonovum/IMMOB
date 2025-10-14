@@ -1,0 +1,208 @@
+{
+"@context":{"skos": "http://www.w3.org/2004/02/skos/core#"},
+"graph":[
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/puntlocatie",
+"skos:prefLabel":"puntlocatie",
+"skos:definition":"",
+"isothes:narrowerPartitive":[
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/punt-door-coordinaten",
+	"skos:prefLabel":"punt door coordinaten"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/punt-op-lineair-element",
+	"skos:prefLabel":"punt op lineair element"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/tpeg-puntlocatie",
+	"skos:prefLabel":"tpeg puntlocatie"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/alert-c-punt",
+	"skos:prefLabel":"alert-c punt"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/open-lr-geo-coordinaat",
+	"skos:prefLabel":"open lr geo-coordinaat"}
+],
+"skos:related":[
+]
+},
+
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/punt-door-coordinaten",
+"skos:prefLabel":"punt door coordinaten",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/puntlocatie", "skos:prefLabel":"puntlocatie"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/punt-op-lineair-element",
+"skos:prefLabel":"punt op lineair element",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/puntlocatie", "skos:prefLabel":"puntlocatie"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/tpeg-puntlocatie",
+"skos:prefLabel":"tpeg puntlocatie",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/puntlocatie", "skos:prefLabel":"puntlocatie"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/alert-c-punt",
+"skos:prefLabel":"alert-c punt",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/puntlocatie", "skos:prefLabel":"puntlocatie"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/open-lr-geo-coordinaat",
+"skos:prefLabel":"open lr geo-coordinaat",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/puntlocatie", "skos:prefLabel":"puntlocatie"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Puntlocatie",
+"skos:prefLabel":"Puntlocatie",
+"skos:definition":"",
+"skos:broader":[{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Locatie","skos:prefLabel":"Locatie"}
+],
+"skos:related":[
+]
+},
+
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/locatie",
+"skos:prefLabel":"locatie",
+"skos:definition":"",
+"isothes:narrowerPartitive":{
+	"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/puntlocatie",
+	"skos:prefLabel":"puntlocatie"
+},
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Puntlocatie", "skos:prefLabel":"Puntlocatie"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Traject/strookverbinding",
+"skos:prefLabel":"Traject/strookverbinding",
+"skos:definition":"",
+"skos:broader":[{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Locatie","skos:prefLabel":"Locatie"}
+],
+"skos:related":[
+]
+},
+
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand",
+"skos:prefLabel":"gebeurtenis of toestand",
+"skos:definition":"",
+"isothes:narrowerPartitive":[
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/afgenomen-zicht",
+	"skos:prefLabel":"afgenomen zicht"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/dieren,-mensen-obstakel,-rommel",
+	"skos:prefLabel":"dieren, mensen obstakel, rommel"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/extreme-weerconditie",
+	"skos:prefLabel":"extreme weerconditie"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/incidentgebied-niet-afgezet",
+	"skos:prefLabel":"incidentgebied niet afgezet"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/korte-wegwerkzaamheden",
+	"skos:prefLabel":"korte wegwerkzaamheden"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/spookrijder",
+	"skos:prefLabel":"spookrijder"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/tijdelijk-glad",
+	"skos:prefLabel":"tijdelijk glad"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/wegblokkade-eenvoudig",
+	"skos:prefLabel":"wegblokkade eenvoudig"}
+],
+"skos:related":[
+]
+},
+
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/afgenomen-zicht",
+"skos:prefLabel":"afgenomen zicht",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/dieren,-mensen-obstakel,-rommel",
+"skos:prefLabel":"dieren, mensen obstakel, rommel",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/extreme-weerconditie",
+"skos:prefLabel":"extreme weerconditie",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/incidentgebied-niet-afgezet",
+"skos:prefLabel":"incidentgebied niet afgezet",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/korte-wegwerkzaamheden",
+"skos:prefLabel":"korte wegwerkzaamheden",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/spookrijder",
+"skos:prefLabel":"spookrijder",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/tijdelijk-glad",
+"skos:prefLabel":"tijdelijk glad",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/wegblokkade-eenvoudig",
+"skos:prefLabel":"wegblokkade eenvoudig",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand", "skos:prefLabel":"gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Gebied",
+"skos:prefLabel":"Gebied",
+"skos:definition":"",
+"skos:broader":[{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Locatie","skos:prefLabel":"Locatie"}
+],
+"skos:related":[
+]
+},
+
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Locatie",
+"skos:prefLabel":"Locatie",
+"skos:definition":"",
+"skos:narrower":[{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Puntlocatie","skos:prefLabel":"Puntlocatie"},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Traject/strookverbinding","skos:prefLabel":"Traject/strookverbinding"},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Gebied","skos:prefLabel":"Gebied"}
+],
+"skos:related":[
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Gebeurtenis-of-toestand", "skos:prefLabel": "Gebeurtenis-of-toestand"}
+]
+},
+
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Gebeurtenis-of-toestand",
+"skos:prefLabel":"Gebeurtenis of toestand",
+"skos:definition":"",
+"isothes:narrowerPartitive":[
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/categorie",
+	"skos:prefLabel":"categorie"},
+	{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/rij-advies",
+	"skos:prefLabel":"rij advies"}
+,{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/heeft-locatie-","skos:prefLabel":"heeft locatie"}],
+"skos:related":[
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Locatie", "skos:prefLabel": "Locatie"}
+]
+},
+
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/categorie",
+"skos:prefLabel":"categorie",
+"skos:definition":"",
+"isothes:narrowerPartitive":{
+	"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/gebeurtenis-of-toestand",
+	"skos:prefLabel":"gebeurtenis of toestand"
+},
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Gebeurtenis-of-toestand", "skos:prefLabel":"Gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{"@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/rij-advies",
+"skos:prefLabel":"rij advies",
+"skos:definition":"",
+"isothes:broaderPartitive":{ "@id":"https://docs.geostandaarden.nl/mobiliteit/id/begrip/Gebeurtenis-of-toestand", "skos:prefLabel":"Gebeurtenis of toestand"},
+"skos:relatedMatch":[]
+},
+{}
+  ]
+}
+  

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Concept Viewer</title>
+  <style>
+    body {
+      display: flex;
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ccc;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #888;
+    }
+
+    #sidebar {
+      width: 300px;
+      height: 100vh;
+      overflow-y: auto;
+      border-right: 1px solid #444;
+      padding: 1em;
+      box-sizing: border-box;
+      background-color: #2b2b2b;
+    }
+
+    #sidebar h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    #sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #sidebar li {
+      margin-bottom: 0.5em;
+    }
+
+    #main {
+      flex-grow: 1;
+      padding: 1em;
+      overflow-y: auto;
+      background-color: #1e1e1e;
+    }
+
+    .tabs {
+      margin-bottom: 1em;
+    }
+
+    .tab-button {
+      padding: 0.5em 1em;
+      border: 1px solid #555;
+      border-bottom: none;
+      background-color: #333;
+      color: #e0e0e0;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .tab-button.active {
+      background-color: #1e1e1e;
+      font-weight: bold;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .tab-content {
+      border: 1px solid #555;
+      padding: 1em;
+      display: none;
+      background-color: #2b2b2b;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #3a3a3a;
+      color: #fff;
+      width: 20%;
+    }
+
+    td {
+      background-color: #2b2b2b;
+    }
+
+    code {
+      background-color: #3a3a3a;
+      padding: 2px 4px;
+      font-size: 90%;
+      color: #dcdcdc;
+    }
+
+    #conceptJson {
+      background: #2b2b2b;
+      border: 1px solid #444;
+      padding: 1em;
+      white-space: pre-wrap;
+      max-height: 400px;
+      overflow: auto;
+      color: #ccc;
+    }
+
+    button {
+      cursor: pointer;
+      background-color: #444;
+      color: #e0e0e0;
+      border: 1px solid #666;
+      padding: 0.5em 1em;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #graph {
+      width: 90%;
+      height: 80%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="sidebar">
+    <h3>Alle concepten</h3>
+    <ul id="conceptList">Laden...</ul>
+  </div>
+
+  <div id="main">
+    <h2>Concept detail</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="graph">Grafiek</button>
+      <button class="tab-button" data-tab="table">Tabel</button>
+      <button class="tab-button" data-tab="json">JSON</button>
+    </div>
+
+    <div id="graph" class="tab-content active"></div>
+    <div id="table" class="tab-content"><div id="conceptContainer">Laden...</div></div>
+    <div id="json" class="tab-content">
+      <button id="copyBtn">Kopieer JSON</button>
+      <pre id="conceptJson"></pre>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    // Tabs functionaliteit
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    const getQueryParam = param => new URLSearchParams(window.location.search).get(param);
+    const uriId = getQueryParam('uri_id');
+
+    function getPrefLabelByUri(uri, concepts) {
+      const match = concepts.find(c => c['@id'] === uri || c.uri === uri || c['@uri'] === uri);
+      return match ? (match.prefLabel || match['skos:prefLabel'] || uri) : uri;
+    }
+
+    function formatValue(value, concepts) {
+      if (Array.isArray(value)) return value.map(v => formatSingleValue(v, concepts)).join('<br>');
+      return formatSingleValue(value, concepts);
+    }
+
+    function formatSingleValue(val, concepts) {
+      if (typeof val === 'object' && val !== null) {
+        if (val.id && val['skos:prefLabel']) return `<a href="${val.id}">${val['skos:prefLabel']}</a>`;
+        if (val['@id'] || val['@uri']) {
+          const uri = val['@id'] || val['@uri'];
+          return `<a href="?uri_id=${encodeURIComponent(uri)}">${getPrefLabelByUri(uri, concepts)}</a>`;
+        }
+        if (val['@value']) return val['@value'];
+        return `<code>${JSON.stringify(val)}</code>`;
+      }
+      if (typeof val === 'string' && val.startsWith('http')) {
+        return `<a href="?uri_id=${encodeURIComponent(val)}">${getPrefLabelByUri(val, concepts)}</a>`;
+      }
+      return val;
+    }
+
+    function removeDuplicateIds(graph) {
+      const seen = new Set();
+      return graph.filter(c => {
+        const id = c['@id'] || c.uri || c['@uri'];
+        if (!id || seen.has(id)) return false;
+        seen.add(id);
+        return true;
+      });
+    }
+
+    // JSON laden en UI opbouwen
+    fetch('model.json')
+      .then(res => res.json())
+      .then(data => {
+        let graph = data.graph || data['@graph'] || [];
+        graph = removeDuplicateIds(graph);
+
+        const conceptList = document.getElementById('conceptList');
+        const container = document.getElementById('conceptContainer');
+
+        const sortedConcepts = graph
+          .filter(c => c.prefLabel || c['skos:prefLabel'])
+          .sort((a, b) => ((a['skos:prefLabel'] || '').toLowerCase()).localeCompare((b['skos:prefLabel'] || '').toLowerCase()));
+
+        conceptList.innerHTML = '';
+        sortedConcepts.forEach(c => {
+          const label = c.prefLabel || c['skos:prefLabel'] || '(geen label)';
+          const uri = c['@uri'] || c.uri || c['@id'];
+          conceptList.innerHTML += `<li><a href="?uri_id=${encodeURIComponent(uri)}">${label}</a></li>`;
+        });
+
+        if (!uriId) return container.textContent = 'Selecteer een concept in de lijst links.';
+
+        const concept = graph.find(c => c['@id'] === uriId || c.uri === uriId || c['@uri'] === uriId);
+        if (!concept) return container.textContent = 'Geen concept gevonden met de opgegeven uri_id.';
+
+        const rows = Object.entries(concept)
+          .filter(([key]) => !key.startsWith('@'))
+          .map(([key, value]) => `<tr><th><code>${key}</code></th><td>${formatValue(value, graph)}</td></tr>`)
+          .join('');
+        const uriRow = `<tr><th><code>uri</code></th><td><a href="${uriId}" target="_blank">${uriId}</a></td></tr>`;
+        container.innerHTML = `<table>${uriRow}${rows}</table>`;
+        document.getElementById('conceptJson').textContent = JSON.stringify(concept, null, 2);
+
+        renderConceptGraph(concept, graph);
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('conceptList').textContent = 'Fout bij laden van model.json.';
+        document.getElementById('conceptContainer').textContent = 'Fout bij laden van model.json.';
+      });
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      navigator.clipboard.writeText(document.getElementById('conceptJson').textContent)
+        .then(() => alert('JSON gekopieerd naar klembord.'));
+    });
+
+    // D3 Grafiek
+    function renderConceptGraph(concept, graph) {
+      const graphDiv = d3.select("#graph");
+      graphDiv.selectAll("*").remove();
+
+      const width = graphDiv.node().clientWidth;
+      const height = graphDiv.node().clientHeight;
+
+      const nodes = new Map();
+      const links = [];
+
+      const uri = concept['@id'] || concept.uri || concept['@uri'];
+      const mainLabel = concept.prefLabel || concept['skos:prefLabel'] || uri;
+
+      function addNode(id, label, main = false) {
+        if (!nodes.has(id)) nodes.set(id, { id, label, main });
+      }
+
+      function addLink(source, target, type) {
+        links.push({ source, target, type });
+      }
+
+      addNode(uri, mainLabel, true);
+
+      const relationTypes = [
+        'skos:broader', 'skos:narrower', 'skos:related',
+        'isothes:broaderPartitive', 'isothes:narrowerPartitive', 'skos:relatedMatch'
+      ];
+
+      relationTypes.forEach(rel => {
+        if (!concept[rel]) return;
+        const related = Array.isArray(concept[rel]) ? concept[rel] : [concept[rel]];
+        related.forEach(r => {
+          const targetId = r['@id'] || r['@uri'] || r.id || r.uri;
+          if (!targetId) return;
+          addNode(targetId, getPrefLabelByUri(targetId, graph));
+          addLink(uri, targetId, rel);
+
+          // Tweede niveau relaties
+          const targetConcept = graph.find(c => c['@id'] === targetId || c.uri === targetId || c['@uri'] === targetId);
+          if (!targetConcept) return;
+          relationTypes.forEach(subrel => {
+            if (!targetConcept[subrel]) return;
+            const subRelated = Array.isArray(targetConcept[subrel]) ? targetConcept[subrel] : [targetConcept[subrel]];
+            subRelated.forEach(sub => {
+              const subId = sub['@id'] || sub.id || sub.uri;
+              if (!subId || subId === uri || nodes.has(subId)) return;
+              addNode(subId, getPrefLabelByUri(subId, graph));
+              addLink(targetId, subId, subrel);
+            });
+          });
+        });
+      });
+
+      const svg = graphDiv.append("svg").attr("width", width).attr("height", height);
+      const nodeList = Array.from(nodes.values());
+
+      const simulation = d3.forceSimulation(nodeList)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(120))
+        .force("charge", d3.forceManyBody().strength(-300))
+        .force("center", d3.forceCenter(width / 2, height / 2));
+
+      const colorMap = { "skos:broader": "#1f77b4", "skos:narrower": "#2ca02c", "skos:related": "#ff7f0e" };
+
+      const link = svg.append("g").attr("stroke", "#aaa").selectAll("line").data(links).join("line")
+        .attr("stroke-width", 2)
+        .attr("stroke", d => colorMap[d.type] || "#999");
+
+      const linkLabel = svg.append("g").selectAll("text").data(links).join("text")
+        .attr("font-size", 10)
+        .attr("fill", "#888")
+        .text(d => d.type.replace('skos:', ''));
+
+      const node = svg.append("g").selectAll("circle").data(nodeList).join("circle")
+        .attr("r", 10)
+        .attr("fill", d => d.main ? "#0077cc" : "#ccc")
+        .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
+
+      const label = svg.append("g").selectAll("text").data(nodeList).join("text")
+        .text(d => d.label)
+        .attr("font-size", 12)
+        .attr("dx", 12)
+        .attr("dy", 4)
+        .style("cursor", "pointer")
+        .style("fill", "#eee")
+        .on("click", (event, d) => { if (!d.main) window.location.href = `?uri_id=${encodeURIComponent(d.id)}`; });
+
+      simulation.on("tick", () => {
+        link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+
+        linkLabel.attr("x", d => (d.source.x + d.target.x) / 2)
+                 .attr("y", d => (d.source.y + d.target.y) / 2);
+
+        node.attr("cx", d => d.x).attr("cy", d => d.y);
+        label.attr("x", d => d.x).attr("y", d => d.y);
+      });
+
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x; d.fy = d.y;
+      }
+      function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null; d.fy = null;
+      }
+    }
+  </script>
+</body>
+</html>

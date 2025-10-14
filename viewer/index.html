@@ -222,7 +222,7 @@
     }
 
     // JSON laden en UI opbouwen
-    fetch('model.json')
+    fetch('/IMMOB/viewer/model.json')
       .then(res => res.json())
       .then(data => {
         let graph = data.graph || data['@graph'] || [];

@@ -4,6 +4,8 @@ Dit is de handleiding voor het omzetten van een UML-model (XMI) naar een NL-SBB 
 
 De viewer is te benaderen via: [https://geonovum.github.io/IMMOB/viewer/](https://geonovum.github.io/IMMOB/viewer/)
 
+Klik [hier](https://geonovum.github.io/IMMOB/viewer/?uri_id=https%3A%2F%2Fdocs.geostandaarden.nl%2Fmobiliteit%2Fid%2Fbegrip%2FVoertuigenergiestation) voor de direct link naar het begrip **Voertuigenergiestation**.
+
 ---
 
 ## Werkwijze

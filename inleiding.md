@@ -31,7 +31,7 @@ tijdelijke DSM-datatabel fungeert in deze fase als overbrugging totdat de
 gegevenscatalogus operationeel is.
 
 <figure id="Figuur_1">
-<img src="data/images/Gegevenscatalogus_in_context.png" alt="">
+<img src="data/Images/Gegevenscatalogus_in_context.png" alt="">
 <figcaption>Architectuurplaat van de gegevenscatalogus in de context van wetgeving en uitvoering</figcaption>
 </figure>
 

@@ -118,7 +118,7 @@ Het NORA-raamwerk gegevenskwaliteit biedt een gestandaardiseerde taal en structu
 
 Het NORA-raamwerk biedt een gemeenschappelijke taal voor het beschrijven en meten van gegevenskwaliteit. Voor het opstellen van het raamwerk is gebruikgemaakt van onafhankelijke (inter)nationale standaarden zoals de ISO/IEC 25024, NEN-ISO 19157 en ISO 5725.
 
-Binnen het NORA-raamwerk wordt onderscheid gemaakt tussen Kwaliteitsdimensies (Juistheid, actualiteit, begrijpelijkheid), Kwaliteitsattributen (Thematische juistheid, Classificatie juistheid, Kwantitatieve juistheid, Updatefrequentie) en Metingen en zinsjablonen om kwaliteit te kwantificeren en/of te beschrijven). 
+Binnen het NORA-raamwerk wordt onderscheid gemaakt tussen Kwaliteitsdimensies (Juistheid, actualiteit, begrijpelijkheid), Kwaliteitsattributen (Thematische juistheid, Classificatie juistheid, Kwantitatieve juistheid, Updatefrequentie) en Metingen en zinsjablonen om kwaliteit te kwantificeren en/of te beschrijven. 
 
 Binnen de ITS-richtlijn zijn verschillende kwaliteitsdimensies en metingen voorgesteld om te bepalen of gegevens aan de kwaliteitseisen voldoen, hiervoor wordt gekeken naar de Avalibillity, Latency, Refreshment Rate, Location accuracy en de Error Rate, deze kwaliteitsdimensies komen ook voor in het NORA-raamwerk en kunnen overgenomen worden als kwaliteitsbepaling voor het IMMOB. 
 

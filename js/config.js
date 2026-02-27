@@ -52,6 +52,11 @@ let respecConfig = {
         name: "Arnoud de Boer",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
+      },
+	  {
+        name: "Paul Janssen",
+        company: "Geonovum",
+        companyURL: "https://www.geonovum.nl",
       }
     ],
   //-- de namen van de auteur(s) ------------------------------------------------------
@@ -60,6 +65,11 @@ let respecConfig = {
     [
       {
         name: "Arnoud de Boer",
+        company: "Geonovum",
+        companyURL: "https://www.geonovum.nl",
+      },
+	  {
+        name: "Mats Braster",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       },
@@ -98,6 +108,22 @@ let respecConfig = {
       status: "Definitief",
       publisher: "Geonovum",
       date: "2024-06-13"
-    }
-  }
+    },
+	"NORA-RGK": {
+	  id: "NORA-RGK",
+      title: "Raamwerk gegevenskwaliteit",
+      href: "https://www.noraonline.nl/wiki/Raamwerk_gegevenskwaliteit",
+      status: "",
+      publisher: "NORA",
+      date: ""
+	},
+	"NL-SBB": {
+	  id: "NL-SBB",
+      title: "NL-SBB - Standaard voor het beschrijven van begrippen",
+      href: "https://docs.geostandaarden.nl/nl-sbb/nl-sbb/",
+      status: "definitief",
+      publisher: "Geonovum",
+      date: ""
+	},
+   }
 };

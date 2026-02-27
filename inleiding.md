@@ -48,10 +48,10 @@ oplossing.
 De gegevenscatalogus bevat naast datasetbeschrijvingen ook een begrippenkader
 voor het domein mobiliteitsdata. Dit bestaat uit:
 
--   Een **begrippenmodel** conform de Nederlandse standaard NL-SBB (MIM-niveau
+-   Een **begrippenmodel** conform de Nederlandse standaard NL-SBB [[!NL-SBB]](MIM-niveau
     1);
 
--   Een **conceptueel informatiemodel** (MIM-niveau 2);
+-   Een **conceptueel informatiemodel conform MIM**[[!MIM12]] (MIM-niveau 2);
 
 -   En de feitelijke **gegevenscatalogus**, waarin per dataset gegevens worden
     vastgelegd zoals:

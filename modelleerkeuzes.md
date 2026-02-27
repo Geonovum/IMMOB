@@ -112,21 +112,19 @@ De eerste fase richt zich op modellering van de volgende mobiliteitsdatasets:
 
 
 ## Modellering van gegevenskwaliteit
-Het Informatiemodel Mobiliteit (IMMOB) beschrijft gegevensstructuren om mobiliteitsgegevens volgens de ITS-richtlijn te modelleren en verwerken. Voor het gebruik van deze gegevens in beleidsvorming en dienstverlening zijn gegevens over gevraagde en geleverde gegevenskwaliteit essentieel.
+Het informatiemodel beschrijft de mobiliteitsgegevens volgens de ITS-richtlijn. Voor het gebruik van deze gegevens in beleidsvorming en dienstverlening zijn gegevens over gevraagde en geleverde gegevenskwaliteit essentieel.
 
-Het NORA-raamwerk gegevenskwaliteit biedt een gestandaardiseerde taal en structuur om datakwaliteit te beschrijven en te beoordelen. Dit raamwerk richt zich op de kwaliteit van gegevens via kwaliteitsdimensies en meetbare kwaliteitsattributen. 
+Het NORA-raamwerk gegevenskwaliteit [[!NORA-RGK]] biedt een gestandaardiseerde taal en structuur om de kwaliteit van gegegevens te beschrijven en te beoordelen. Dit raamwerk richt zich op de kwaliteit van gegevens via kwaliteitsdimensies en meetbare kwaliteitsattributen. 
 
 Het NORA-raamwerk biedt een gemeenschappelijke taal voor het beschrijven en meten van gegevenskwaliteit. Voor het opstellen van het raamwerk is gebruikgemaakt van onafhankelijke (inter)nationale standaarden zoals de ISO/IEC 25024, NEN-ISO 19157 en ISO 5725.
 
 Binnen het NORA-raamwerk wordt onderscheid gemaakt tussen Kwaliteitsdimensies (Juistheid, actualiteit, begrijpelijkheid), Kwaliteitsattributen (Thematische juistheid, Classificatie juistheid, Kwantitatieve juistheid, Updatefrequentie) en Metingen en zinsjablonen om kwaliteit te kwantificeren en/of te beschrijven. 
 
-Binnen de ITS-richtlijn zijn verschillende kwaliteitsdimensies en metingen voorgesteld om te bepalen of gegevens aan de kwaliteitseisen voldoen, hiervoor wordt gekeken naar de Avalibillity, Latency, Refreshment Rate, Location accuracy en de Error Rate, deze kwaliteitsdimensies komen ook voor in het NORA-raamwerk en kunnen overgenomen worden als kwaliteitsbepaling voor het IMMOB. 
+Binnen de ITS-richtlijn zijn verschillende kwaliteitsdimensies en metingen voorgesteld om te bepalen of gegevens aan de kwaliteitseisen voldoen, hiervoor wordt gekeken naar de Availability, Latency, Refreshment Rate, Location accuracy en de Error Rate, deze kwaliteitsdimensies komen ook voor in het NORA-raamwerk en kunnen overgenomen worden als kwaliteitsbepaling voor het IMMOB. 
 
 Met de bovengenoemde kwaliteitsdimensies zullen meetbare kwaliteitsnormen gedefinieerd moeten worden, hiervoor heeft de ITS-richtlijn 3 verschillende niveaus opgenomen (Basic, Enhanched, Advanced). Deze niveaus kunnen worden gebruikt als startpunt voor het bepalen van kwaliteitsnormen binnen het IMMOB. De kwaliteitsnormen kunnen als zinsjablonen zoals omschreven in het NORA-raamwerk opgenomen worden in het IMMOB.
 
-De verantwoordelijkheid voor de datakwaliteit is belegd bij de bronhouders, zij zijn verantwoordelijk voor het bewaken van de datakwaliteit van de bronnen en dienen hier actief op te sturen. 
-
-Het NORA-raamwerk en de ITS-richtlijn bieden een stevige basis om datakwaliteit binnen het IMMOB gestructureerd te duiden en en toe te passen de operationele toepassing daarvan. Door kwaliteitsdimensies en attributen expliciet toe te passen op ITS gegevenstypen zoals ‘maximumsnelheid’ ontstaat er meetbaarheid en mogelijkheden voor kwaliteitsbeoordeling en monitoring.
+Het NORA-raamwerk en de ITS-richtlijn bieden een basis om datakwaliteit binnen het IMMOB gestructureerd te duiden en en toe te passen de operationele toepassing daarvan. Door kwaliteitsdimensies en attributen expliciet toe te passen op ITS gegevenstypen zoals ‘maximumsnelheid’ ontstaat er meetbaarheid en mogelijkheden voor kwaliteitsbeoordeling en monitoring.
 
 ## Modellering van relaties met «trace»
 

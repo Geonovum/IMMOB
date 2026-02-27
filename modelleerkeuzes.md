@@ -112,7 +112,7 @@ De eerste fase richt zich op modellering van de volgende mobiliteitsdatasets:
 
 
 ## Modellering van gegevenskwaliteit
-Het Informatiemodel Mobiliteit (IMMOB) beschrijft gegevensstructuren om mobiliteitsgegevens volgens de ITS-richtlijn te modelleren en verwerken. Voor het gebruik van deze gegevens in beleidsvorming en dienstverlening is zijn gegevens over gevraagde en geleverde gegevenskwaliteit essentieel.
+Het Informatiemodel Mobiliteit (IMMOB) beschrijft gegevensstructuren om mobiliteitsgegevens volgens de ITS-richtlijn te modelleren en verwerken. Voor het gebruik van deze gegevens in beleidsvorming en dienstverlening zijn gegevens over gevraagde en geleverde gegevenskwaliteit essentieel.
 
 Het NORA-raamwerk gegevenskwaliteit biedt een gestandaardiseerde taal en structuur om datakwaliteit te beschrijven en te beoordelen. Dit raamwerk richt zich op de kwaliteit van gegevens via kwaliteitsdimensies en meetbare kwaliteitsattributen. 
 

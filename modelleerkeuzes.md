@@ -117,8 +117,13 @@ Multimodal Traffic Information System (MMTIS) - [NAPCORE Data-dictionary/DR (EU)
 Safety Related Trafiic Information System (SRTI) - [NAPCORE Data-dictonary DR (EU) 886/2013](https://github.com/NAPCORE/Data-dictionary/blob/main/DR%20(EU)%20886-2013.md) 
 Safe and Secure Truck Parking (SSTP) - [NAPCORE Data-dictonary DR (EU) 885/2013](https://github.com/NAPCORE/Data-dictionary/blob/main/DR%20(EU)%20885-2013.md)
 
-OPMERKING:
+> OPMERKING:
 De bovenstaande links is naar de NAPCORE Data-dictionary gepubliceerd tot eind 2025. Daarna is er een update gepubliceerd. Deze is nog niet geevalueerd op impact op het model.
+>
+>[Actuele NAPCORE ITS Data Dictionary](https://github.com/NAPCORE/its-data-dictionary/tree/main)  
+[Tot 2025 NAPCORE Data Dictionary](https://github.com/NAPCORE/Data-dictionary)  
+
+>De tot 2025 versie is een verhalende beschrijving van de inhoud van ITS waar de begrippen en een model uit afgeleid kunnen worden. Na 2025 zijn de begrippen alfabetisch en met definitie opgenomen.
 
 
 ## Modellering van gegevenskwaliteit

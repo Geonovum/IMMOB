@@ -143,6 +143,9 @@ Het NORA-raamwerk en de ITS-richtlijn bieden een basis om datakwaliteit binnen h
 
 ## Modellering van relaties met «trace»
 
+> **_Opmerking:_** Deze paragraaf is niet meer geldig. Traces naar data zijn op dit moment niet opgenomen.
+
+
 De verbinding tussen regelgeving en data wordt gelegd met «trace»-relaties:
 
 -   In UML wordt dit gedaan met een Dependency met het stereotype «trace»;

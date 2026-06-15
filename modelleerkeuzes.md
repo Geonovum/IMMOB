@@ -129,7 +129,7 @@ De bovenstaande links is naar de NAPCORE Data-dictionary gepubliceerd tot eind 2
 ## Modellering van gegevenskwaliteit
 Het informatiemodel beschrijft de mobiliteitsgegevens volgens de ITS-richtlijn. Voor het gebruik van deze gegevens in beleidsvorming en dienstverlening zijn gegevens over gevraagde en geleverde gegevenskwaliteit essentieel.
 
-Het NORA-raamwerk gegevenskwaliteit [[!NORA-RGK]] biedt een gestandaardiseerde taal en structuur om de kwaliteit van gegegevens te beschrijven en te beoordelen. Dit raamwerk richt zich op de kwaliteit van gegevens via kwaliteitsdimensies en meetbare kwaliteitsattributen. 
+Het NORA-raamwerk gegevenskwaliteit [[NORA-RGK]] biedt een gestandaardiseerde taal en structuur om de kwaliteit van gegegevens te beschrijven en te beoordelen. Dit raamwerk richt zich op de kwaliteit van gegevens via kwaliteitsdimensies en meetbare kwaliteitsattributen. 
 
 Het NORA-raamwerk biedt een gemeenschappelijke taal voor het beschrijven en meten van gegevenskwaliteit. Voor het opstellen van het raamwerk is gebruikgemaakt van onafhankelijke (inter)nationale standaarden zoals de ISO/IEC 25024, NEN-ISO 19157 en ISO 5725.
 

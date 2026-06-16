@@ -4893,13 +4893,6 @@
         ],
         "html": "<p>De toegestane beweegrichting van het snelverkeer op een wegvak, indien er sprake is van een gedwongen rijrichting.</p>",
         "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.06 (foreground color: #ffffff, background color: #0085c6, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
-      },
-      {
-        "target": [
-          ".sidelabel"
-        ],
-        "html": "<div class=\"sidelabel\">Geonovum Informatiemodel - Werkversie</div>",
-        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ffffff, background color: #ff0000, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
       }
     ]
   }

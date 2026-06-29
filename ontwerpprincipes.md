@@ -16,19 +16,20 @@ De kern van deze gegevenscatalogus is het centraal beheerde informatiemodel. Dit
 model fungeert als enige bron van waarheid waarin alle relevante kennis – zoals
 juridische begrippen, datasets, relaties en bronnen – samenkomt. Het
 informatiemodel is opgezet om een eenduidige verbinding te leggen tussen formele
-juridische termen uit Europese [wet- en
-regelgeving](https://github.com/NAPCORE/Data-dictionary/blob/main/DR%20(EU)%202022-670.md)
+juridische termen en betekenis uit Europese richtlijn (Directive) [ITS-richtlijn](http://data.europa.eu/eli/dir/2010/40/2023-12-20), de hieraan gekoppelde gedelegeerde richtlijnen (Delegated regulations):
+- [Real Time Traffic Information System (RTTI)](https://eur-lex.europa.eu/eli/reg_del/2022/670/oj)
+- [Multimodal Traffic Information System (MMTIS)](http://data.europa.eu/eli/reg_del/2024/490/oj)
+- [Safety Related Trafiic Information System (SRTI)](http://data.europa.eu/eli/reg_del/2013/886/oj) 
+- [Safe and Secure Truck Parking (SSTP)](http://data.europa.eu/eli/reg_del/2013/885/oj)
+
 en informatiekundige concepten in Nederlandse mobiliteitsdatasets. Hierdoor
 ontstaat een gemeenschappelijk, consistent en betrouwbaar begrippenkader.
 
 ## Verbinding tussen wetgeving en data
 
-Het informatiemodel legt expliciete relaties tussen formele termen uit Europese
-en nationale regelgeving
-([ITS-richtlijn](https://github.com/NAPCORE/Data-dictionary/blob/main/DR%20(EU)%202022-670.md))
-en informatiekundige concepten die in Nederlandse mobiliteitsdatasets voorkomen.
-Zo ontstaat een gedeeld begrippenkader dat wetgeving, beleid en data effectief
-met elkaar verbindt.
+De context van de modellering is de ITS wetgeving. Voor de inhoudelijke input van de gegevenssets en daarop gebaseerde modellen is de door [NAPCORE](https://napcore.eu/) opgestelde [NAPCORE Data dictionary](https://napcore.eu/its-data-dictionary/) gebruikt. Met deze data dictionary heeft NAPCORE voor de aan de aan de ITS-richtlijn gekoppelde RTTI, MMTIS, SRTI en SSTP de gegevenstypen voorzien van definities en waar mogelijk een beschrijving van de minimale verplichtingen voor het delen van informatie. De NAPCORE data dictionary voorziet hiermee in een gegevens view op de ITS en gedelegeerde richtlijnen.
+
+Het IMMOB en daarmee deze gegevenscatalogus gebruikt de NAPCORE data dictionary als informatiebasis voor de ontwikkeling van het IMMOB informatiemodel door gegevenstypen over te nemen en te voorzien van attributen en relaties. Zo ontstaat een begrippenkader dat wetgeving, beleid en data effectief met elkaar verbindt.
 
 ## Gebruiksvriendelijkheid en modelgedreven aanpak
 

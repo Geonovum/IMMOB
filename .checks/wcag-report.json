@@ -4,7 +4,7 @@
     "id": "area-alt",
     "impact": "critical",
     "description": "Ensure <area> elements of image maps have alternative text",
-    "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/area-alt?application=webdriverjs",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/area-alt?application=webdriverjs",
     "nodes": [
       {
         "target": [
@@ -510,7 +510,7 @@
     "id": "color-contrast",
     "impact": "serious",
     "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-    "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=webdriverjs",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=webdriverjs",
     "nodes": [
       {
         "target": [
@@ -4893,6 +4893,13 @@
         ],
         "html": "<p>De toegestane beweegrichting van het snelverkeer op een wegvak, indien er sprake is van een gedwongen rijrichting.</p>",
         "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.06 (foreground color: #ffffff, background color: #0085c6, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+      },
+      {
+        "target": [
+          ".sidelabel"
+        ],
+        "html": "<div class=\"sidelabel\">Geonovum Informatiemodel - Werkversie</div>",
+        "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ffffff, background color: #ff0000, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
       }
     ]
   }

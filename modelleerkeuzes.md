@@ -125,6 +125,14 @@ De bovenstaande links is naar de NAPCORE Data-dictionary gepubliceerd tot eind 2
 
 >De tot 2025 versie is een verhalende beschrijving van de inhoud van ITS waar de begrippen en een model uit afgeleid kunnen worden. Na 2025 zijn de begrippen alfabetisch en met definitie opgenomen.
 
+## Naamgeving van modelelementen
+
+Voor de naamgeving van de modelelementen wordt de ITS en de NAPCORE Data-dictionary invulling daarvan gevolgd. Omdat het IMMob in het Nederlands is opgesteld zijn de modelelement waar nodig naar het Nederlands vertaald. Voor de in de ITS genoemde elementen wordt daarvoor de NL vertaling van eur-lex.europa.eu gevolgd, bijvoorbeeld: [GEDELEGEERDE VERORDENING (EU) 2022/670 VAN DE COMMISSIE](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=CELEX:32022R0670).
+In het UML wordt de Engelse originele naamgeving als 'alias' van de Nederlandse naam opgeslagen. Dit is ook in de gegevenscatalogus opgenomen. Een voorbeeld: het IMMob element 'Toegangspunt' heeft als alias de NAPCORE term 'AccessNode'.
+
+Het komt voor dat in IMMob afgeweken wordt van een in de ITS of NAPCORE opgenomen term. De reden hiervoor is dan dat de term niet aansluit bij regels voor objectgericht informatiemodellering. Een voorbeeld is het gebruik van enkelvoud bij de namen van klassen.
+
+
 
 ## Modellering van gegevenskwaliteit
 Het informatiemodel beschrijft de mobiliteitsgegevens volgens de ITS-richtlijn. Voor het gebruik van deze gegevens in beleidsvorming en dienstverlening zijn gegevens over gevraagde en geleverde gegevenskwaliteit essentieel.
